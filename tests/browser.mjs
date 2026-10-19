@@ -8,6 +8,9 @@ const defaultCatalog = JSON.parse(
   await readFile(new URL("../src/catalog.json", import.meta.url), "utf8"),
 );
 const initialSize = defaultCatalog.length;
+const photoMetadata = JSON.parse(
+  await readFile(new URL("../src/flavorPhotos.json", import.meta.url), "utf8"),
+);
 const browser = await chromium.launch({
   executablePath: process.env.BROWSER_EXECUTABLE || undefined,
   headless: true,
@@ -35,6 +38,31 @@ assert.equal(await page.getByLabel("Catalog entries").inputValue(), "official");
 const caramel = page.locator(".flavor").filter({
   has: page.getByRole("heading", { name: "Salted Caramel", exact: true }),
 });
+await caramel.locator(".flavor-photo").scrollIntoViewIfNeeded();
+await caramel.locator(".flavor-photo").evaluate((img) => img.decode());
+assert.match(
+  await caramel.locator(".flavor-photo").getAttribute("src"),
+  /flavors\/lc-salted-caramel\.jpg$/,
+);
+const apple = page
+  .locator(".flavor")
+  .filter({
+    has: page.getByRole("heading", { name: "Apple Cajeta", exact: true }),
+  });
+assert.equal(await apple.locator(".flavor-photo").count(), 0);
+assert.match(await apple.locator("figcaption").innerText(), /Illustration/);
+const decodedPhotos = await page.evaluate(async (photos) => {
+  return await Promise.all(
+    photos.map(async (photo) => {
+      const img = new Image();
+      img.src = photo.path;
+      await img.decode();
+      return img.naturalWidth > 0 && img.naturalHeight > 0;
+    }),
+  );
+}, Object.values(photoMetadata));
+assert.equal(decodedPhotos.length, 45);
+assert.ok(decodedPhotos.every(Boolean));
 assert.match(
   await caramel.locator(".nutrition-panel").innerText(),
   /FICTIONAL NUTRITION/,
@@ -56,6 +84,7 @@ await page.getByRole("button", { name: "Ask →", exact: true }).click();
 assert.match(await page.locator(".reply").innerText(), /FICTIONAL NUTRITION/);
 await page.getByLabel("Catalog entries").selectOption("demo");
 assert.equal(await page.locator(".flavor").count(), 3);
+assert.equal(await page.locator(".flavor-photo").count(), 0);
 assert.equal(
   await page
     .locator(".results>div")
@@ -269,8 +298,31 @@ assert.ok(
   ),
 );
 await legacy.close();
+const broken = await browser.newPage();
+await broken.route("**/flavors/lc-salted-caramel.jpg", (route) =>
+  route.abort(),
+);
+await broken.goto(process.env.TEST_BASE_URL || "http://127.0.0.1:5173");
+await broken.getByRole("button", { name: /Canal Park/ }).click();
+await broken.getByRole("button", { name: /Find My Flavors/ }).click();
+await broken
+  .getByLabel("Search flavor names", { exact: true })
+  .fill("Salted Caramel");
+const brokenCard = broken
+  .locator(".flavor")
+  .filter({
+    has: broken.getByRole("heading", { name: "Salted Caramel", exact: true }),
+  });
+await brokenCard.locator(".flavor-art").scrollIntoViewIfNeeded();
+await brokenCard
+  .getByText("Illustration — official flavor photo unavailable", {
+    exact: true,
+  })
+  .waitFor();
+assert.equal(await brokenCard.locator(".flavor-photo").count(), 0);
+await broken.close();
 assert.deepEqual(errors, []);
 console.log(
-  "Browser checks passed: filters, location switching, ingredient question, add/edit/archive/delete, refresh persistence, JSON roundtrip, invalid import, nutrition labels and editing, unknown dyes, legacy migration, mobile overflow, no runtime errors.",
+  "Browser checks passed: filters, location switching, ingredient question, add/edit/archive/delete, refresh persistence, JSON roundtrip, invalid import, nutrition labels and editing, unknown dyes, legacy migration, all 45 official photos, missing/broken photo fallback, mobile overflow, no runtime errors.",
 );
 await browser.close();

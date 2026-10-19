@@ -176,3 +176,39 @@ test("ingredient facts need evidence and survive JSON export/import", () => {
   f.ingredientInfo.fields.dyes = { status: "unknown", value: "No dyes" };
   assert.throws(() => validateCatalog([f]));
 });
+
+test("official photo mapping requires both identity and name, and excludes demos", async () => {
+  const { getFlavorPhoto } = await import("./flavorPhotos");
+  const caramel = catalog.find((f) => f.id === "lc-salted-caramel")!;
+  assert.equal(getFlavorPhoto(caramel)?.path, "flavors/lc-salted-caramel.jpg");
+  assert.equal(getFlavorPhoto({ ...caramel, demo: true }), undefined);
+  assert.equal(
+    getFlavorPhoto({ ...caramel, name: "My custom recipe" }),
+    undefined,
+  );
+  assert.equal(getFlavorPhoto({ ...caramel, id: "constructor" }), undefined);
+  assert.equal(
+    getFlavorPhoto(catalog.find((f) => f.id === "lc-apple-cajeta")!),
+    undefined,
+  );
+});
+test("all photo metadata matches official catalog records and bundled files", async () => {
+  const { flavorPhotos } = await import("./flavorPhotos");
+  const { statSync } = await import("node:fs");
+  assert.equal(Object.keys(flavorPhotos).length, 45);
+  for (const [id, photo] of Object.entries(flavorPhotos)) {
+    const flavor = catalog.find((f) => f.id === id)!;
+    assert.ok(flavor);
+    assert.equal(flavor.demo, false);
+    assert.equal(flavor.name, photo.name);
+    assert.match(photo.path, /^flavors\/[a-z0-9-]+\.(jpg|jpeg|png|webp)$/);
+    assert.match(
+      photo.source,
+      /^https:\/\/(www\.)?lovecreamery\.com\/wp-content\/uploads\//,
+    );
+    assert.ok(photo.alt.trim());
+    assert.ok(
+      statSync(new URL("../public/" + photo.path, import.meta.url)).size > 0,
+    );
+  }
+});

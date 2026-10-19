@@ -1209,3 +1209,25 @@ footer .official-logo {
     font-size: 13px;
   }
 }
+
+.flavor-visual {
+  margin: 0;
+}
+.flavor-art.has-photo:after {
+  display: none;
+}
+.flavor-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flavor-visual figcaption {
+  padding: 10px 16px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.flavor-visual figcaption a {
+  text-underline-offset: 3px;
+}

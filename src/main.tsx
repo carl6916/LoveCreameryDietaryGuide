@@ -6,6 +6,7 @@ import brand from "./brand.json";
 import research from "./research.json";
 import { emptyNutrition, emptyIngredientInfo } from "./nutrition";
 import { NutritionPanel, NutritionEditor } from "./Nutrition";
+import { FlavorImage } from "./FlavorImage";
 import {
   allergens,
   answer,
@@ -378,20 +379,7 @@ function App() {
                         .filter((f) => classify(f, applied) === group)
                         .map((f) => (
                           <article className="flavor" key={f.id}>
-                            <div
-                              className="flavor-art"
-                              style={{ background: f.color + "30" }}
-                            >
-                              <div
-                                style={{ background: f.color }}
-                                className="mini-scoop"
-                              />
-                              <span>
-                                {f.demo
-                                  ? "DEMONSTRATION"
-                                  : "OFFICIAL MENU LISTING"}
-                              </span>
-                            </div>
+                            <FlavorImage flavor={f} />
                             <div className="card-body">
                               <h3>{f.name}</h3>
                               <p>{f.description}</p>

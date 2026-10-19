@@ -1,0 +1,362 @@
+{
+  "lc-basil-raspberry": {
+    "name": "Basil Raspberry",
+    "path": "flavors/lc-basil-raspberry.jpg",
+    "alt": "Basil Raspberry from Love Creamery Duluth MN Superior WI-2",
+    "source": "https://lovecreamery.com/wp-content/uploads/2026/08/Basil-Raspberry-from-Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-blackberry-chip": {
+    "name": "Blackberry Chip",
+    "path": "flavors/lc-blackberry-chip.jpg",
+    "alt": "Blackberry Chip ice cream Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2025/11/Blackberry-Chip_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-butter-pecan": {
+    "name": "Butter Pecan",
+    "path": "flavors/lc-butter-pecan.jpg",
+    "alt": "Butter Pecan ice cream from Love Creamer in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/06/Butter-Pecan_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-6.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-buttermilk-vanilla": {
+    "name": "Buttermilk Vanilla",
+    "path": "flavors/lc-buttermilk-vanilla.jpg",
+    "alt": "Buttermilk Vanilla ice cream from Love Creamery in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/05/Buttermilk-Vanilla_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-1.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-carrot-cake": {
+    "name": "Carrot Cake",
+    "path": "flavors/lc-carrot-cake.jpg",
+    "alt": "Carrot Cake Ice Cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/11/Carrot-Cake_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-3.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-chamomile-honeycomb": {
+    "name": "Chamomile Honeycomb",
+    "path": "flavors/lc-chamomile-honeycomb.jpg",
+    "alt": "Chamomile Honeycomb Ice Cream Cone",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/love-creamery-chamomile-honeycomb-ice-cream-cone-750x500.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-chocolate-cookie-chip": {
+    "name": "Chocolate Cookie Chip",
+    "path": "flavors/lc-chocolate-cookie-chip.jpg",
+    "alt": "Official website photograph of Chocolate Cookie Chip",
+    "source": "https://lovecreamery.com/wp-content/uploads/2025/03/Chocolate-Cookie-Chip_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-chokecherry-chip": {
+    "name": "Chokecherry Chip",
+    "path": "flavors/lc-chokecherry-chip.jpg",
+    "alt": "Chokecherry Chip ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/09/Chokecherry-Chip_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-cinnamon-snickerdoodle": {
+    "name": "Cinnamon Snickerdoodle",
+    "path": "flavors/lc-cinnamon-snickerdoodle.jpg",
+    "alt": "Cinnamon Snickerdoodle ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/07/Cinnamon-Snickerdoodle_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-6.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-coffee-bean-crunch": {
+    "name": "Coffee Bean Crunch",
+    "path": "flavors/lc-coffee-bean-crunch.jpg",
+    "alt": "Coffee Bean Crunch ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2026/07/Coffee-Bean-Crunch_Love-Creamery-Duluth-MN-Superior-WI.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-cookie-butter": {
+    "name": "Cookie Butter",
+    "path": "flavors/lc-cookie-butter.jpg",
+    "alt": "Cookie Butter ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/05/Cookie-Butter_Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-cookie-dough": {
+    "name": "Cookie Dough",
+    "path": "flavors/lc-cookie-dough.jpg",
+    "alt": "Cookie Dough ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/04/Cookie-Dough-ice-cream_Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-dark-chocolate": {
+    "name": "Dark Chocolate",
+    "path": "flavors/lc-dark-chocolate.jpg",
+    "alt": "Dark Chocolate from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/05/Dark-Chocolate_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-espresso-brownie-fudge": {
+    "name": "Espresso Brownie Fudge",
+    "path": "flavors/lc-espresso-brownie-fudge.jpg",
+    "alt": "Espresso Fudge Brownie from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2026/04/Espresso-Fudge-Brownie_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-goat-cheese-honeycomb": {
+    "name": "Goat Cheese Honeycomb",
+    "path": "flavors/lc-goat-cheese-honeycomb.jpg",
+    "alt": "Goat Cheese Honeycomb ice cream from Love Creamery",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/02/Goat-Cheese-Honeycomb_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-4.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-goat-cheese-with-brandied-cherries": {
+    "name": "Goat Cheese with Brandied Cherries",
+    "path": "flavors/lc-goat-cheese-with-brandied-cherries.jpg",
+    "alt": "love creamery goat cheese ice cream pint",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/05/Goat-Cheese-Brandied-Cherries-Pint-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-honey-lavender": {
+    "name": "Honey Lavender",
+    "path": "flavors/lc-honey-lavender.jpg",
+    "alt": "Honey Lavender from Love Creamery Duluth MN Superior WI ice cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/Honey-Lavender_Love-Creamery-Duluth-MN-Superior-WI-ice-cream-5-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-key-lime-pie": {
+    "name": "Key Lime Pie",
+    "path": "flavors/lc-key-lime-pie.jpg",
+    "alt": "Key Lime Pie from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/Key-Lime-Pie_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-lemon-sherbet": {
+    "name": "Lemon Sherbet",
+    "path": "flavors/lc-lemon-sherbet.jpg",
+    "alt": "Lemon Sherbet from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2025/04/Lemon-Sherbet_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-lime-sherbet": {
+    "name": "Lime Sherbet",
+    "path": "flavors/lc-lime-sherbet.jpg",
+    "alt": "Lime Sherbet",
+    "source": "https://lovecreamery.com/wp-content/uploads/2024/06/Lime-Sherbet.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-london-fog": {
+    "name": "London Fog",
+    "path": "flavors/lc-london-fog.jpg",
+    "alt": "London Fog Ice Cream Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/London-Fog_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-1-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-mint-chocolate-chip": {
+    "name": "Mint Chocolate Chip",
+    "path": "flavors/lc-mint-chocolate-chip.jpg",
+    "alt": "Mint Chocolate Chip ice cream from Love Creamery in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/Mint-Chip_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-3.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-mocha-mousse": {
+    "name": "Mocha Mousse",
+    "path": "flavors/lc-mocha-mousse.jpg",
+    "alt": "Mocha Mousse ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/07/Mocha-Mousse-ice-cream-from-Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-monster-cookie": {
+    "name": "Monster Cookie",
+    "path": "flavors/lc-monster-cookie.jpg",
+    "alt": "Monster Cookie from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/01/Monster-Cookie_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-pumpkin-pecan-streusel-and-vanilla-mousse": {
+    "name": "Pumpkin, Pecan Streusel and Vanilla Mousse",
+    "path": "flavors/lc-pumpkin-pecan-streusel-and-vanilla-mousse.jpg",
+    "alt": "pumpkin spice ice cream pint",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/12/pumpkin-spice-ice-cream-pint.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-pumpkin-spice-cheesecake": {
+    "name": "Pumpkin Spice Cheesecake",
+    "path": "flavors/lc-pumpkin-spice-cheesecake.jpg",
+    "alt": "Pumpkin Spice Cheesecake ice cream from Love Creamery Duluth MN Superior Wi",
+    "source": "https://lovecreamery.com/wp-content/uploads/2024/09/Pumpkin-Spice-Cheesecake_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-5.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-salted-caramel": {
+    "name": "Salted Caramel",
+    "path": "flavors/lc-salted-caramel.jpg",
+    "alt": "Salted Caramel ice cream from Love Creamery in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/05/Salted-Caramel_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-4.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-salted-chocolate-brownie": {
+    "name": "Salted Chocolate Brownie",
+    "path": "flavors/lc-salted-chocolate-brownie.jpg",
+    "alt": "Salted Chocolate Brownie ice cream from love creamery",
+    "source": "https://lovecreamery.com/wp-content/uploads/2021/06/Salted-Chocolate-Brownie_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-salted-honey-honeycomb": {
+    "name": "Salted Honey Honeycomb",
+    "path": "flavors/lc-salted-honey-honeycomb.jpg",
+    "alt": "Salted Honey Honeycomb from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2026/02/Salted-Honey-Honeycomb_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-salted-licorice": {
+    "name": "Salted Licorice",
+    "path": "flavors/lc-salted-licorice.jpg",
+    "alt": "Salted Licorice ice cream from Love Creamery in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/09/Salted-Licorice_Challenge-Center_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-14.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-sorbet": {
+    "name": "Sorbet",
+    "path": "flavors/lc-sorbet.jpg",
+    "alt": "Vegan Honeyberry Sorbet from Love Creamery in Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/04/Vegan-Honeyberry-Sorbet_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-18.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-spicy-hot-chocolate": {
+    "name": "Spicy Hot Chocolate",
+    "path": "flavors/lc-spicy-hot-chocolate.jpg",
+    "alt": "mexican hot chocolate",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/12/mexican-hot-chocolate-750x706.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-strawberry": {
+    "name": "Strawberry",
+    "path": "flavors/lc-strawberry.jpg",
+    "alt": "Strawberry ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/04/Strawberry-w-Dried-Strawberries-ice-cream_Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-cashew-brownie": {
+    "name": "Vegan Cashew Brownie",
+    "path": "flavors/lc-vegan-cashew-brownie.jpg",
+    "alt": "Vegan Cashew Brownie ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2024/02/Vegan-Cashew-Brownie-ice-cream_Love-Creamery-Duluth-MN-Superior-WI.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-chai": {
+    "name": "Vegan Chai",
+    "path": "flavors/lc-vegan-chai.jpg",
+    "alt": "Vegan Chai ice cream from Love Creamery",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/06/Vegan-Chai_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-cinnamon-snickerdoodle": {
+    "name": "Vegan Cinnamon Snickerdoodle",
+    "path": "flavors/lc-vegan-cinnamon-snickerdoodle.jpg",
+    "alt": "Cinnamon Snickerdoodle Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/11/Cinnamon-Snickerdoodle-Ice-Cream.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-cinnamon-streusel": {
+    "name": "Vegan Cinnamon Streusel",
+    "path": "flavors/lc-vegan-cinnamon-streusel.jpg",
+    "alt": "Vegan Cinnamon Streusel_Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2024/11/Vegan-Cinnamon-Streusel_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-12.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-cookie-dough": {
+    "name": "Vegan Cookie Dough",
+    "path": "flavors/lc-vegan-cookie-dough.jpg",
+    "alt": "Vegan Cookie Dough Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2024/04/Vegan-Cookie-Dough_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-750x750.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-lemon-curd-blueberry": {
+    "name": "Vegan Lemon Curd Blueberry",
+    "path": "flavors/lc-vegan-lemon-curd-blueberry.jpg",
+    "alt": "Lemon Blueberry ice cream from Love Creamery",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/10/Lemon-Blueberry_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-750x938.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-mint-chocolate-chip": {
+    "name": "Vegan Mint Chocolate Chip",
+    "path": "flavors/lc-vegan-mint-chocolate-chip.jpg",
+    "alt": "Vegan Mint Chip Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/04/love-creamery-vegan-mint-chip-ice-cream-duluth-mn-750x571.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-s-mores": {
+    "name": "Vegan S’mores",
+    "path": "flavors/lc-vegan-s-mores.jpg",
+    "alt": "Vegan S'mores ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/01/Vegan-Smores-ice-cream_Love-Creamery-Duluth-MN-Superior-WI-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-salted-caramel": {
+    "name": "Vegan Salted Caramel",
+    "path": "flavors/lc-vegan-salted-caramel.jpg",
+    "alt": "Vegan Salted Caramel ice cream from Love Creamery Duluth MN Superior WI",
+    "source": "https://lovecreamery.com/wp-content/uploads/2023/03/Vegan-Salted-Caramel_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-salted-chocolate-brownie": {
+    "name": "Vegan Salted Chocolate Brownie",
+    "path": "flavors/lc-vegan-salted-chocolate-brownie.jpg",
+    "alt": "Vegan Salted Chocolate Brownie from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2026/02/Vegan-Salted-Chocolate-Brownie_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-2-2.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-toffee": {
+    "name": "Vegan Toffee",
+    "path": "flavors/lc-vegan-toffee.jpg",
+    "alt": "vegan toffee ice cream from love creamery in duluth mn superior wi",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/08/Vegan-Toffee_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream-6.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  },
+  "lc-vegan-vanilla": {
+    "name": "Vegan Vanilla",
+    "path": "flavors/lc-vegan-vanilla.jpg",
+    "alt": "Vegan Vanilla from Love Creamery Duluth MN Superior WI Ice Cream",
+    "source": "https://lovecreamery.com/wp-content/uploads/2022/04/Vegan-Vanilla_Love-Creamery-Duluth-MN-Superior-WI-Ice-Cream.jpg",
+    "listingSource": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "checked": "2026-10-19"
+  }
+}
