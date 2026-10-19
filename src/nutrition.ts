@@ -160,12 +160,16 @@ export function validateIngredientInfo(value: unknown): IngredientInfo {
   }
   return structuredClone(value) as IngredientInfo;
 }
-export function nutritionSummary(n: Nutrition): string {
-  const heading =
-    n.status === "fictional"
+export function nutritionSummary(n: Nutrition, showNotice = true): string {
+  const heading = showNotice
+    ? n.status === "fictional"
       ? "FICTIONAL NUTRITION — invented, not measured or calculated for Love Creamery"
       : n.status === "documented"
         ? "Source-documented nutrition"
-        : "Nutrition unknown — not published in this catalog";
-  return `${heading}. Serving: ${n.servingSize}${n.servingGrams !== null ? ` (${n.servingGrams} g)` : ""}. ${nutrientFields.map((f) => `${f.label}: ${n[f.key] === null ? "Unknown" : `${n[f.key]} ${f.unit}`}`).join("; ")}.${n.source ? ` Source: ${n.source}.` : ""}${n.verified ? ` Checked: ${n.verified}.` : ""}`;
+        : "Nutrition unknown — not published in this catalog"
+    : "Nutrition per stored serving";
+  const serving =
+    !showNotice && n.status === "fictional" ? "example serving" : n.servingSize;
+  const sourceVisible = showNotice || n.status === "documented";
+  return `${heading}. Serving: ${serving}${n.servingGrams !== null ? ` (${n.servingGrams} g)` : ""}. ${nutrientFields.map((f) => `${f.label}: ${n[f.key] === null ? "Unknown" : `${n[f.key]} ${f.unit}`}`).join("; ")}.${sourceVisible && n.source ? ` Source: ${n.source}.` : ""}${sourceVisible && n.verified ? ` Checked: ${n.verified}.` : ""}`;
 }

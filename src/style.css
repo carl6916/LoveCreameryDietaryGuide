@@ -1390,3 +1390,49 @@ footer .official-logo {
   font-weight: normal;
   letter-spacing: 0;
 }
+
+.test-notice {
+  margin: 10px 0 30px;
+  padding: 24px 28px;
+  border: 2px solid var(--brown);
+  border-left-width: 8px;
+  border-radius: 16px;
+  background: var(--yellow);
+}
+.test-notice > strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.4;
+}
+.test-notice p {
+  font-size: 14px;
+  color: var(--brown);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.test-notice summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+.nav-link {
+  display: inline-block;
+  padding: 12px 18px;
+  background: var(--yellow);
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+.catalog-controls {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 640px) {
+  .test-notice {
+    padding: 20px;
+    border-left-width: 6px;
+  }
+  .test-notice > strong {
+    font-size: 19px;
+  }
+}

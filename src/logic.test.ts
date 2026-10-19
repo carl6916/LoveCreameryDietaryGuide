@@ -1,8 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import data from "./catalog.json";
+import fixtures from "../tests/fixtures/dietary-flavors.json";
 import { answer, classify, validateCatalog, matchesLocations } from "./logic";
-const catalog = validateCatalog(data);
+const catalog = validateCatalog([...fixtures, ...data]);
 test("vegan and gluten-free requirements are combined", () => {
   assert.equal(
     classify(catalog[0], ["vegan", "gluten-free"]),
@@ -250,4 +251,33 @@ test("assistant shares the selected location union and honors explicit shops", (
   assert.match(mentioned, /Coconut Cocoa/);
   assert.match(mentioned, /Peanut Cookie Crunch/);
   assert.match(answer("vegan flavors", catalog, []), /No matching/);
+});
+
+test("published catalog contains only the 46 researched flavor entries", () => {
+  const published = validateCatalog(data);
+  assert.equal(published.length, 46);
+  assert.ok(published.every((f) => !f.demo));
+  for (const fixture of fixtures)
+    assert.ok(!published.some((f) => f.id === fixture.id));
+  assert.ok(published.every((f) => f.nutrition.status === "fictional"));
+});
+test("customer answers rely on the main-page notice without repeating it", () => {
+  const text = answer(
+    "How many calories and sugars in Salted Caramel?",
+    validateCatalog(data),
+    ["canal"],
+    undefined,
+    { showNotices: false },
+  );
+  assert.match(text, /Calories: \d+ kcal/);
+  assert.match(text, /Total sugars: \d+ g/);
+  assert.doesNotMatch(text, /FICTIONAL NUTRITION|invented|not accurate/);
+  const dye = answer(
+    "Does Salted Caramel have dyes?",
+    validateCatalog(data),
+    ["canal"],
+    undefined,
+    { showNotices: false },
+  );
+  assert.match(dye, /Dyes \/ added colors: Unknown/);
 });

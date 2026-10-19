@@ -101,18 +101,6 @@ export function FlavorDetails({
               </React.Fragment>
             ))}
           </dl>
-          <p className="detail-allergy-warning">
-            <strong>Cross-contact may occur.</strong> Love Creamery is not an
-            allergen-free facility. Vegan and gluten-free labels do not
-            guarantee allergy safety. Confirm ingredients and preparation
-            practices directly with the shop.
-          </p>
-          {flavor.demo && (
-            <p className="detail-fictional-note">
-              <strong>Fictional demonstration flavor.</strong> Recipe and
-              allergen values do not describe a verified Love Creamery product.
-            </p>
-          )}
         </section>
         <NutritionPanel flavor={flavor} expanded />
         <section className="detail-provenance">

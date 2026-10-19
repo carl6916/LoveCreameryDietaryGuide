@@ -127,6 +127,7 @@ export function answer(
   catalog: Flavor[],
   location: string | readonly string[],
   selected?: Flavor,
+  { showNotices = true }: { showNotices?: boolean } = {},
 ): string {
   const q = question.toLowerCase();
   const needs: Need[] = [];
@@ -192,11 +193,13 @@ export function answer(
         ? candidates
             .map(
               (f) =>
-                `${f.name}${f.demo ? " [DEMONSTRATION FLAVOR]" : " [OFFICIAL MENU LISTING]"}${needs.length ? `\nDietary check: ${classify(f, needs)}` : ""}\n${wantsNutrition ? nutritionSummary(f.nutrition) : ""}${requestedFacts.map((field) => `\n${field.label}: ${f.ingredientInfo.fields[field.key].value} [${evidenceLabels[f.ingredientInfo.fields[field.key].status]}]`).join("")}${requestedFacts.length && f.ingredientInfo.source ? `\nIngredient source: ${f.ingredientInfo.source}; checked ${f.ingredientInfo.verified || "Unknown"}` : ""}${/ingredient/.test(q) ? `\nIngredient description (${f.ingredientsComplete === "yes" ? "complete list" : "partial or unconfirmed list"}): ${f.ingredients}` : ""}`,
+                `${f.name}${f.demo ? " [DEMONSTRATION FLAVOR]" : " [OFFICIAL MENU LISTING]"}${needs.length ? `\nDietary check: ${classify(f, needs)}` : ""}\n${wantsNutrition ? nutritionSummary(f.nutrition, showNotices) : ""}${requestedFacts.map((field) => `\n${field.label}: ${f.ingredientInfo.fields[field.key].value} [${evidenceLabels[f.ingredientInfo.fields[field.key].status]}]`).join("")}${requestedFacts.length && f.ingredientInfo.source ? `\nIngredient source: ${f.ingredientInfo.source}; checked ${f.ingredientInfo.verified || "Unknown"}` : ""}${/ingredient/.test(q) ? `\nIngredient description (${f.ingredientsComplete === "yes" ? "complete list" : "partial or unconfirmed list"}): ${f.ingredients}` : ""}`,
             )
             .join("\n\n")
         : "No matching catalog entries for that flavor and location.") +
-      "\n\nFictional numbers are invented demonstrations, not estimates, nutrition labels, or guidance for medical diets. Missing dye and ingredient information stays unknown. Confirm real nutrition and preparation practices directly with Love Creamery."
+      (showNotices
+        ? "\n\nFictional numbers are invented demonstrations, not estimates, nutrition labels, or guidance for medical diets. Missing dye and ingredient information stays unknown. Confirm real nutrition and preparation practices directly with Love Creamery."
+        : "")
     );
   }
   if (!needs.length && !named && !/flavor|flavour|available|ingredient/.test(q))
@@ -209,6 +212,8 @@ export function answer(
     (lines.length
       ? lines.join("\n\n")
       : "No matching catalog entries for that flavor and location.") +
-    "\n\nDemo data does not establish real products or stock. Unknown information needs confirmation. Recipe absence does not guarantee protection from cross-contact. Confirm ingredients and preparation practices directly with Love Creamery."
+    (showNotices
+      ? "\n\nDemo data does not establish real products or stock. Unknown information needs confirmation. Recipe absence does not guarantee protection from cross-contact. Confirm ingredients and preparation practices directly with Love Creamery."
+      : "")
   );
 }
