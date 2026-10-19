@@ -1,14 +1,17 @@
 import React from "react";
 import type { Flavor } from "./logic";
 import { evidenceLabels, nutrientFields, ingredientFields } from "./nutrition";
+import { portionNutrition, defaultPortion, type Portion } from "./servings";
 export function NutritionPanel({
   flavor: f,
   expanded = false,
+  portion = defaultPortion,
 }: {
   flavor: Flavor;
   expanded?: boolean;
+  portion?: Portion;
 }) {
-  const n = f.nutrition;
+  const n = portionNutrition(f.nutrition, portion);
   return (
     <section
       className="nutrition-panel"
@@ -16,8 +19,8 @@ export function NutritionPanel({
     >
       <h4>Nutrition & ingredients</h4>
       <p className="serving">
-        Per {n.status === "fictional" ? "example serving" : n.servingSize}
-        {n.servingGrams !== null ? ` · ${n.servingGrams} g` : ""}
+        Per {n.servingSize} · {n.servingGrams} g ice cream
+        {portion.container === "cone" ? " + one cone (included in totals)" : ""}
       </p>
       <div className="nutrition-highlights">
         {(["calories", "totalSugars", "protein"] as const).map((key) => {

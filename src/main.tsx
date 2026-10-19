@@ -14,6 +14,9 @@ import {
   type Flavor,
   type Need,
 } from "./logic";
+import { nutrientFields, type Nutrient } from "./nutrition";
+import { defaultPortion, sortFlavors, type Portion } from "./servings";
+import { ServingControls } from "./ServingControls";
 import "./style.css";
 const catalog = validateCatalog(initial).filter(
   (flavor) => !flavor.demo && !flavor.archived,
@@ -59,16 +62,19 @@ function App() {
     [reply, setReply] = useState(""),
     [selected, setSelected] = useState<Flavor>(),
     [flavorSearch, setFlavorSearch] = useState("");
+  const [portion, setPortion] = useState<Portion>(defaultPortion);
+  const [sortField, setSortField] = useState<"name" | Nutrient>("name");
+  const [descending, setDescending] = useState(false);
   function ask(q: string) {
     setQuestion(q);
     setReply(answer(q, catalog, undefined, selected, { showNotices: false }));
   }
-  const visible = catalog.filter(
+  const visible = sortFlavors(catalog.filter(
     (f) =>
       !f.archived &&
       matchesLocations(f, selectedLocations) &&
       f.name.toLowerCase().includes(flavorSearch.toLowerCase().trim()),
-  );
+  ), sortField, descending, portion);
   return (
     <>
       <header>
@@ -205,6 +211,9 @@ function App() {
                   setFound(false);
                   setSelectedLocations([]);
                   setFlavorSearch("");
+                  setSortField("name");
+                  setDescending(false);
+                  setPortion(defaultPortion);
                 }}
               >
                 Reset filters ↺
@@ -323,7 +332,17 @@ function App() {
                     placeholder="e.g. Salted Caramel"
                   />
                 </label>
+                <label>Sort by<select aria-label="Sort by" value={sortField} onChange={e => setSortField(e.target.value as "name" | Nutrient)}>
+                  <option value="name">Flavor name</option>
+                  {nutrientFields.map(field => <option key={field.key} value={field.key}>{field.label}</option>)}
+                </select></label>
+                <label>Order<select aria-label="Order" value={descending ? "descending" : "ascending"} onChange={e => setDescending(e.target.value === "descending")}>
+                  <option value="ascending">{sortField === "name" ? "A to Z" : "Low to high"}</option>
+                  <option value="descending">{sortField === "name" ? "Z to A" : "High to low"}</option>
+                </select></label>
               </div>
+              <ServingControls portion={portion} onChange={setPortion} />
+              <p className="sort-note">Sorted within each dietary group for the selected serving. Unknown values appear last. Open a flavor to see nutrition.</p>
               {!visible.length && (
                 <p>
                   No entries match this view. Try another location, clear the
@@ -476,6 +495,8 @@ function App() {
       </main>
       {detailFlavor && (
         <FlavorDetails
+          portion={portion}
+          onPortionChange={setPortion}
           flavor={detailFlavor}
           needs={applied}
           onClose={() => setDetailFlavor(undefined)}

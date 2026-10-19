@@ -1462,3 +1462,11 @@ footer .official-logo {
     font-size: 12px;
   }
 }
+
+.serving-controls { border: 1px solid #cbb9ab; border-radius: 16px; padding: 16px; margin: 16px 0; min-width: 0; }
+.serving-controls legend { font-weight: 800; padding: 0 6px; }
+.serving-options { display: flex; flex-wrap: wrap; gap: 16px; }
+.serving-options label { display: flex; flex-direction: column; gap: 6px; flex: 1 1 180px; font-weight: 700; }
+.serving-options select { width: 100%; }
+.serving-controls p, .sort-note { font-size: .85rem; line-height: 1.6; }
+.catalog-controls { flex-wrap: wrap; }

@@ -138,6 +138,15 @@ assert.equal(
   await page.getByText("Old Customer Override", { exact: true }).count(),
   0,
 );
+await page.getByLabel("Sort by", { exact: true }).selectOption("calories");
+await page.getByLabel("Order", { exact: true }).selectOption("descending");
+const groups = await page.locator(".cards").evaluateAll(groups => groups.map(group => [...group.querySelectorAll("h3")].map(h => h.textContent)));
+for (const names of groups) {
+  const values = names.map(name => catalog.find(f => f.name === name).nutrition.calories).filter(v => v !== null);
+  assert.deepEqual(values, [...values].sort((a, b) => b - a));
+}
+await page.getByLabel("Sort by", { exact: true }).selectOption("name");
+await page.getByLabel("Order", { exact: true }).selectOption("ascending");
 const caramel = page.locator(".flavor").filter({
   has: page.getByRole("heading", { name: "Salted Caramel", exact: true }),
 });
@@ -177,6 +186,14 @@ const dialog = page.getByRole("dialog", {
 });
 await dialog.waitFor();
 assert.equal(await dialog.locator('a[href^="http"]').count(), 0);
+const baseCalories = Number(await dialog.locator(".nutrition-highlights strong").first().innerText().then(t => t.replace(/[^0-9.]/g, "")));
+await dialog.getByLabel("Size", { exact: true }).selectOption("large");
+await dialog.getByLabel("Cup or cone", { exact: true }).selectOption("cone");
+assert.equal(Number((await dialog.locator(".nutrition-highlights strong").first().innerText()).replace(/[^0-9.]/g, "")), baseCalories * 1.5 + 50);
+assert.match(await dialog.locator(".serving").innerText(), /150 g ice cream.*cone/);
+await dialog.getByLabel("Size", { exact: true }).selectOption("regular");
+await dialog.getByLabel("Cup or cone", { exact: true }).selectOption("cup");
+
 assert.doesNotMatch(
   await dialog.innerText(),
   /Listing checked:|Nutrition checked:|Ingredients checked:|Ingredient source:|Nutrition source:|https?:\/\//i,
@@ -196,7 +213,7 @@ assert.match(
 assert.equal(
   await dialog
     .locator(
-      "input,select,textarea,.evidence-note,.detail-allergy-warning,.test-notice",
+      "input,textarea,.evidence-note,.detail-allergy-warning,.test-notice",
     )
     .count(),
   0,

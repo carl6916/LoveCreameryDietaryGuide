@@ -3,6 +3,8 @@ import { classify, allergens, type Flavor, type Need } from "./logic";
 import locations from "./locations.json";
 import { FlavorImage } from "./FlavorImage";
 import { NutritionPanel } from "./Nutrition";
+import { ServingControls } from "./ServingControls";
+import type { Portion } from "./servings";
 const statusLabels = {
   contains: "Contains",
   absent: "Not listed as an ingredient (verified)",
@@ -10,11 +12,15 @@ const statusLabels = {
 };
 export function FlavorDetails({
   flavor,
+  portion,
+  onPortionChange,
   needs,
   onClose,
   onAsk,
 }: {
   flavor: Flavor;
+  portion: Portion;
+  onPortionChange: (portion: Portion) => void;
   needs: Need[];
   onClose: () => void;
   onAsk: () => void;
@@ -102,7 +108,8 @@ export function FlavorDetails({
             ))}
           </dl>
         </section>
-        <NutritionPanel flavor={flavor} expanded />
+        <ServingControls portion={portion} onChange={onPortionChange} />
+        <NutritionPanel flavor={flavor} portion={portion} expanded />
         <section className="detail-provenance">
           <h3>Ingredients</h3>
           <p>

@@ -331,3 +331,26 @@ test("dietary recommendations retain unknowns and exclude conflicts", () => {
   assert.doesNotMatch(nutrition, /Peanut Cookie Crunch|Does not match/);
   assert.match(answer("What flavors are vegan?", [catalog[3]]), /No matching/);
 });
+
+
+test("portion nutrition scales every nutrient, adds one cone, and preserves unknowns", async () => {
+  const { portionNutrition } = await import("./servings");
+  const base = catalog[0].nutrition;
+  const small = portionNutrition(base, { size: "small", container: "cup" });
+  const large = portionNutrition(base, { size: "large", container: "cup" });
+  assert.equal(small.calories, Math.round(base.calories! * 75 / base.servingGrams! * 10) / 10);
+  assert.equal(large.totalSugars, Math.round(base.totalSugars! * 150 / base.servingGrams! * 10) / 10);
+  const cone = portionNutrition(base, { size: "large", container: "cone" });
+  assert.equal(cone.calories, large.calories! + 50);
+  assert.equal(cone.totalSugars, large.totalSugars! + 3);
+  assert.equal(portionNutrition({ ...base, calories: null }, { size: "small", container: "cone" }).calories, null);
+  assert.equal(portionNutrition({ ...base, servingGrams: null }, { size: "small", container: "cup" }).protein, null);
+  assert.equal(base.servingGrams, catalog[0].nutrition.servingGrams);
+});
+test("nutrition sorting supports both directions and keeps unknowns last", async () => {
+  const { sortFlavors, defaultPortion } = await import("./servings");
+  const sample = catalog.slice(0, 3).map((f, i) => ({ ...f, nutrition: { ...f.nutrition, servingGrams: 100, calories: [300, null, 100][i] } }));
+  assert.deepEqual(sortFlavors(sample, "calories", false, defaultPortion).map(f => f.nutrition.calories), [100, 300, null]);
+  assert.deepEqual(sortFlavors(sample, "calories", true, defaultPortion).map(f => f.nutrition.calories), [300, 100, null]);
+  assert.equal(sample[0].nutrition.calories, 300);
+});
