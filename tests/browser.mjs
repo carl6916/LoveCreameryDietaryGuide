@@ -12,6 +12,16 @@ const page = await browser.newPage({ viewport: { width: 1400, height: 1000 } });
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 await page.goto(process.env.TEST_BASE_URL || "http://127.0.0.1:5173");
+for (const selector of ["header .official-logo", ".hero-photo"]) {
+  const image = page.locator(selector);
+  await image.waitFor();
+  await image.evaluate((img) => img.decode());
+  assert.ok(
+    await image.evaluate((img) => img.naturalWidth > 0),
+    `${selector} must load`,
+  );
+}
+
 await page.getByRole("button", { name: /Canal Park/ }).click();
 await page.getByRole("checkbox", { name: "Vegan", exact: true }).check();
 await page.getByRole("checkbox", { name: "Gluten-free", exact: true }).check();
@@ -105,13 +115,11 @@ await page
   .locator("input[type=file]")
   .setInputFiles(artifact("love-export.json"));
 await page.getByText("Edited Browser Scoop", { exact: true }).waitFor();
-await page
-  .locator("input[type=file]")
-  .setInputFiles({
-    name: "bad.json",
-    mimeType: "application/json",
-    buffer: Buffer.from("[{}]"),
-  });
+await page.locator("input[type=file]").setInputFiles({
+  name: "bad.json",
+  mimeType: "application/json",
+  buffer: Buffer.from("[{}]"),
+});
 await page
   .getByRole("status")
   .filter({ hasText: /Invalid catalog/ })

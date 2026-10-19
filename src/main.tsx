@@ -39,29 +39,6 @@ const statusLabel = {
   absent: "Not listed as an ingredient (verified)",
   unknown: "Unknown",
 };
-function WingedScoop() {
-  return (
-    <svg
-      className="winged-scoop"
-      viewBox="0 0 150 100"
-      aria-hidden="true"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M51 43C33 45 19 36 8 24c-1 20 9 33 30 35M47 53C30 59 20 52 13 45c2 17 15 25 35 20M99 43c18 2 32-7 43-19 1 20-9 33-30 35M103 53c17 6 27-1 34-8-2 17-15 25-35 20" />
-      <path d="m55 57 20 34 20-34Z" fill="#f8da77" />
-      <path d="m62 68 14 10m-7-19 17 14m-1-11L71 83" strokeWidth="2" />
-      <path
-        d="M51 53c-5-7-2-15 5-18-1-12 8-22 20-21 12 0 21 10 20 21 7 4 9 12 4 18-5 6-12 4-17 0-5 5-12 5-17 0-5 5-11 5-15 0Z"
-        fill="#efb6c9"
-      />
-      <path d="m69 6 5-4m13 5 3-5m-36 8-3-4" strokeWidth="2" />
-    </svg>
-  );
-}
 function BrandMark() {
   return (
     <>
@@ -73,7 +50,6 @@ function BrandMark() {
         />
       ) : (
         <>
-          <WingedScoop />
           <span className="wordmark">
             LOVE<span>CREAMERY</span>
           </span>
@@ -155,56 +131,24 @@ function App() {
               <span>✧ Honest about the unknowns</span>
             </div>
           </div>
-          <figure
-            className={
-              "hero-visual " + (brand.heroImage ? "has-photo" : "illustrated")
-            }
-          >
+          <figure className="hero-visual has-photo">
             <div className="packaging-shape shape-circle" aria-hidden="true" />
             <div className="packaging-shape shape-checker" aria-hidden="true" />
-            {brand.heroImage ? (
-              <img
-                className="hero-photo"
-                src={brand.heroImage}
-                alt={brand.heroAlt}
-                fetchPriority="high"
-              />
-            ) : (
-              <div className="pint-scene" aria-hidden="true">
-                <div className="pint pint-pink">
-                  <div className="pint-lid" />
-                  <WingedScoop />
-                  <span>
-                    LOVE
-                    <br />
-                    CREAMERY
-                  </span>
-                  <div className="pint-pattern" />
-                </div>
-                <div className="pint pint-blue">
-                  <div className="pint-lid" />
-                  <WingedScoop />
-                  <span>
-                    LOVE
-                    <br />
-                    CREAMERY
-                  </span>
-                  <div className="pint-pattern" />
-                </div>
-                <span className="scene-spark">✦</span>
-              </div>
-            )}
+            <img
+              className="hero-photo"
+              src={brand.heroImage}
+              alt={brand.heroAlt}
+              width="1500"
+              height="1000"
+              fetchPriority="high"
+            />
             <span className="scoop-sticker" aria-hidden="true">
               made with
               <br />
               <b>a little love</b>
               <span>✦</span>
             </span>
-            <figcaption>
-              {brand.heroImage
-                ? brand.heroCredit
-                : "Packaging-inspired illustration · not a product photograph"}
-            </figcaption>
+            <figcaption>{brand.heroCredit}</figcaption>
           </figure>
         </div>
         <aside className="safety">
@@ -430,6 +374,42 @@ function App() {
                 ))}
               </section>
             )}
+            <section className="shop-story" aria-labelledby="shop-story-title">
+              <figure>
+                <img
+                  src={brand.storeImage}
+                  alt={brand.storeAlt}
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Lincoln Park, Duluth · photograph from Love Creamery’s website
+                </figcaption>
+              </figure>
+              <div>
+                <span className="eyebrow">
+                  FROM THE NEIGHBORHOOD SCOOP SHOP
+                </span>
+                <h2 id="shop-story-title">
+                  A little local love.
+                  <br />A lot of personality.
+                </h2>
+                <p>
+                  Colorful cups. The winged ice cream cone. A stop worth looking
+                  forward to. Bring that same curiosity to ingredients: use this
+                  guide to prepare questions for the scoop counter.
+                </p>
+                <p className="story-note">
+                  Real shop imagery, fictional catalog examples. A photograph
+                  cannot confirm a flavor’s ingredients, allergens, or current
+                  availability.
+                </p>
+                <a className="story-link" href="https://www.lovecreamery.com/">
+                  Visit Love Creamery’s official website ↗
+                </a>
+              </div>
+            </section>
             <section id="assistant" className="assistant">
               <div>
                 <span className="eyebrow">A LITTLE HELP, RIGHT HERE</span>
@@ -741,8 +721,11 @@ function App() {
             </a>{" "}
             · <a href="https://lovecreamery.com/faqs/">Official FAQs</a>
             <br />
-            Official product details were unavailable during development.
-            Confirm directly with the shop.
+            Packaging reference:{" "}
+            <a href={brand.referenceUrl}>Matthew G. Olin and Jacey Kufahl</a>.
+            <br />
+            Brand images do not verify the fictional catalog. Confirm products
+            and ingredients directly with the shop.
           </p>
         </footer>
       </main>

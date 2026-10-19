@@ -1,8 +1,10 @@
 {
-  "logoImage": null,
-  "heroImage": null,
-  "heroAlt": "Love Creamery ice cream",
-  "heroCredit": "",
+  "logoImage": "brand/love-creamery-logo.jpg",
+  "heroImage": "brand/love-creamery-cups.jpg",
+  "heroAlt": "Two cups of Love Creamery ice cream in winged-logo packaging against a sky-blue background",
+  "heroCredit": "Brand photography · pictured scoops do not describe the demonstration catalog",
+  "storeImage": "brand/love-creamery-lincoln-park.jpg",
+  "storeAlt": "Love Creamery’s Lincoln Park storefront in Duluth",
   "designReference": "Love Creamery packaging by Matthew G. Olin and Jacey Kufahl",
-  "referenceUrl": "https://www.matthewolin.com/"
+  "referenceUrl": "https://www.matthewolin.com/love-creamery/"
 }

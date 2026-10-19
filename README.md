@@ -21,7 +21,7 @@ The question guide uses local keywords, synonyms, full flavor names, store names
 
 ## Data and safety
 
-All bundled flavors are **fictional demonstration data**, not verified Love Creamery products. The official website could not be accessed during development, so no real recipe or stock claims were inferred. Absence values in demonstrations refer only to fictional recipes. Reference resources: https://lovecreamery.com/ice-cream-flavors/ and https://lovecreamery.com/faqs/ .
+All bundled flavors are **fictional demonstration data**, not verified Love Creamery products. The initial catalog was created while the official website was unavailable. Later access to brand imagery has not independently verified any real recipe, allergen status, or stock. Absence values in demonstrations refer only to fictional recipes. Reference resources: https://lovecreamery.com/ice-cream-flavors/ and https://lovecreamery.com/faqs/ .
 
 Love Creamery is not an allergen-free facility; cross-contact may occur. A recipe match is never a guarantee of allergy safety. Vegan is independent of milk allergen status. Gluten-free does not establish protection from cross-contact. Unknown is not absence. Customers with serious allergies must confirm ingredients and preparation practices directly with the shop.
 
@@ -60,6 +60,8 @@ The website is a public independent demonstration, not a verified product catalo
 
 ## Visual direction and brand assets
 
-The visual direction follows the user's references to Love Creamery packaging by Matthew G. Olin and Jacey Kufahl: sky blue, soft yellow, pink, warm cream, and chocolate brown; rounded typography, geometric patterns, and a winged ice cream motif. These are design approximations, not official brand specifications. The network blocked access to the official website, portfolio, and photography source during this update; the actual current branding could not be independently verified.
+The design uses approximate sky blue, soft yellow, pink, warm cream, and chocolate brown, inspired by the Love Creamery packaging project by Matthew G. Olin and Jacey Kufahl. These are not official color specifications. The app now bundles the actual winged logo, the blue-background cups photograph shown in the user's reference, and a Lincoln Park storefront photograph. No external requests are needed to display these images.
 
-The winged scoop and pint illustration are original placeholders, not the official Love Creamery logo or packaging artwork. No real product photography is currently bundled. `src/brand.json` provides local image slots for approved logo artwork, a large real hero photograph, its alt text, and credit. Add files to `public/brand/` and configure relative paths such as `brand/ice-cream.jpg` (without a leading slash). This works offline and under GitHub Pages. See `public/brand/README.md`. Photography must not imply that fictional flavors are real shop products or establish any allergen status.
+Sources and original URLs are documented in `public/brand/README.md`. The packaging portfolio describes work from 2020–2022; images are brand references, not evidence of current recipes or stock. The logo and cups image were matched visually to the supplied references. The low-resolution storefront image embedded in chat was not available as a downloadable file; the supporting section uses a documented Lincoln Park photograph from the official site instead.
+
+Edit `src/brand.json` to change local images, alt text, or credits. Put assets in `public/brand/` and use relative paths such as `brand/ice-cream.jpg` without a leading slash for GitHub Pages compatibility. Brand imagery must never be associated with fictional flavor cards as if it verified their ingredients or allergens. The bundled flavor catalog remains entirely fictional.
