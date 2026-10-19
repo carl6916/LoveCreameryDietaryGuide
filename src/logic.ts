@@ -125,7 +125,7 @@ export function validateCatalog(value: unknown): Flavor[] {
 export function answer(
   question: string,
   catalog: Flavor[],
-  location: string | readonly string[],
+  location: string | readonly string[] = locations.map((l) => l.id),
   selected?: Flavor,
   { showNotices = true }: { showNotices?: boolean } = {},
 ): string {
@@ -147,11 +147,14 @@ export function answer(
     ...(/lincoln/.test(q) ? ["lincoln"] : []),
     ...(/billings|superior/.test(q) ? ["billings"] : []),
   ];
+  if (/\bduluth\b/.test(q) && !/canal|lincoln/.test(q))
+    mentionedLocations.push("canal", "lincoln");
+  const fallback = typeof location === "string" ? [location] : location;
   const loc = mentionedLocations.length
     ? mentionedLocations
-    : typeof location === "string"
-      ? [location]
-      : location;
+    : fallback.filter(Boolean).length
+      ? fallback
+      : locations.map((l) => l.id);
   const named =
     catalog
       .filter((f) => q.includes(f.name.toLowerCase()))

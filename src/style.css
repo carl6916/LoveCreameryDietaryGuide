@@ -1436,3 +1436,29 @@ footer .official-logo {
     font-size: 19px;
   }
 }
+
+.guide-tabs {
+  display: flex;
+  gap: 10px;
+}
+[role="tabpanel"][hidden] {
+  display: none;
+}
+.question-scope {
+  padding: 14px 16px;
+  background: #fff9ed;
+  border-radius: 12px;
+}
+#assistant[role="tabpanel"] {
+  margin-top: 30px;
+}
+@media (max-width: 640px) {
+  .guide-tabs {
+    width: 100%;
+    gap: 7px;
+  }
+  .guide-tabs button {
+    flex: 1;
+    font-size: 12px;
+  }
+}

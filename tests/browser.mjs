@@ -69,6 +69,44 @@ assert.equal(await page.locator("input[type=file],.editor").count(), 0);
 assert.ok(
   await page.getByRole("button", { name: /Find My Flavors/ }).isDisabled(),
 );
+// Questions work immediately, before any location or dietary filter is selected.
+const questionsTab = page.getByRole("tab", {
+  name: "Ask a question",
+  exact: true,
+});
+const flavorsTab = page.getByRole("tab", {
+  name: "Find your flavors",
+  exact: true,
+});
+await questionsTab.click();
+assert.equal(await questionsTab.getAttribute("aria-selected"), "true");
+assert.equal(
+  await page.getByRole("button", { name: /Find My Flavors/ }).count(),
+  0,
+);
+assert.ok(await page.locator("#question").isEnabled());
+await page.locator("#question").fill("How much protein in Vegan Vanilla?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
+await page
+  .locator("#question")
+  .fill("How much protein in Vegan Vanilla in Billings Park?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(await page.locator(".reply").innerText(), /No matching/);
+await page
+  .getByRole("button", {
+    name: "Which flavors are vegan and gluten-free? ↗",
+    exact: true,
+  })
+  .click();
+assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
+await questionsTab.focus();
+await page.keyboard.press("Home");
+assert.equal(await flavorsTab.getAttribute("aria-selected"), "true");
+await page.keyboard.press("ArrowRight");
+assert.equal(await questionsTab.getAttribute("aria-selected"), "true");
+await page.keyboard.press("ArrowLeft");
+assert.equal(await flavorsTab.getAttribute("aria-selected"), "true");
 await page.getByRole("button", { name: /Canal Park/ }).click();
 await page.getByRole("checkbox", { name: "Vegan", exact: true }).check();
 await page.getByRole("checkbox", { name: "Gluten-free", exact: true }).check();
@@ -168,6 +206,11 @@ await dialog
   .getByRole("button", { name: "Close flavor details", exact: true })
   .click();
 assert.ok(await opener.evaluate((el) => el === document.activeElement));
+await questionsTab.click();
+// Existing Canal Park browse filters must not exclude a Lincoln Park flavor from questions.
+await page.locator("#question").fill("How much protein in Vegan Vanilla?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
 await page
   .locator("#question")
   .fill("How many calories and sugars in Salted Caramel?");
@@ -188,6 +231,7 @@ assert.doesNotMatch(
   await page.locator(".reply").innerText(),
   /Ingredient source:|checked 2026-|https?:\/\//i,
 );
+await flavorsTab.click();
 await page.getByRole("button", { name: /Lincoln Park/ }).click();
 await page.getByRole("button", { name: /Find My Flavors/ }).click();
 assert.equal(
@@ -209,9 +253,11 @@ assert.equal(
     .count(),
   1,
 );
+await questionsTab.click();
 await page.locator("#question").fill("How much protein in Vegan Vanilla?");
 await page.getByRole("button", { name: "Ask →", exact: true }).click();
 assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
+await flavorsTab.click();
 await page.getByRole("button", { name: /Billings Park/ }).click();
 await page.getByRole("button", { name: /Find My Flavors/ }).click();
 assert.equal(await page.locator(".flavor").count(), 46);
@@ -233,9 +279,12 @@ await page
 assert.ok(
   await page.getByRole("button", { name: /Find My Flavors/ }).isDisabled(),
 );
+await questionsTab.click();
+assert.ok(await page.locator("#question").isEnabled());
 assert.ok(
-  await page.getByRole("button", { name: "Ask →", exact: true }).isDisabled(),
+  await page.getByRole("button", { name: "Ask →", exact: true }).isEnabled(),
 );
+assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
 // Reload ignores old customer edits and keeps the original storage intact.
 await page.reload();
 assert.equal(
@@ -271,6 +320,22 @@ assert.ok(
 );
 await page.screenshot({
   path: join(tmpdir(), "love-mobile.png"),
+  fullPage: true,
+});
+await questionsTab.click();
+await page
+  .locator("#question")
+  .fill("How much protein in Espresso Brownie Fudge?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(
+  await page.locator(".reply").innerText(),
+  /Espresso Brownie Fudge/,
+);
+assert.ok(
+  await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+);
+await page.screenshot({
+  path: join(tmpdir(), "love-questions-mobile.png"),
   fullPage: true,
 });
 await page.setViewportSize({ width: 1400, height: 1000 });
@@ -314,10 +379,17 @@ await brokenDialog
   .getByRole("button", { name: "Ask about this flavor →", exact: true })
   .click();
 assert.equal(await broken.getByRole("dialog").count(), 0);
+assert.equal(
+  await broken
+    .getByRole("tab", { name: "Ask a question", exact: true })
+    .getAttribute("aria-selected"),
+  "true",
+);
+assert.ok(await broken.locator("#question").isVisible());
 assert.match(await broken.locator(".reply").innerText(), /Salted Caramel/);
 await broken.close();
 assert.deepEqual(errors, []);
 console.log(
-  "Browser checks passed: read-only customer catalog, no fictional entries or legacy overrides, one main-page disclaimer, multiple locations, dietary groups, compact cards, nutrition and store details, keyboard/mobile dialogs, assistant, all 45 photos and fallback.",
+  "Browser checks passed: read-only customer catalog, no fictional entries or legacy overrides, one main-page disclaimer, independent Questions tab and all-location defaults, named locations/cities, multiple locations, dietary groups, compact cards, nutrition and store details, keyboard/mobile dialogs, assistant, all 45 photos and fallback.",
 );
 await browser.close();

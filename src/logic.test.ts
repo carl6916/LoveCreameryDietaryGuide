@@ -250,7 +250,7 @@ test("assistant shares the selected location union and honors explicit shops", (
   );
   assert.match(mentioned, /Coconut Cocoa/);
   assert.match(mentioned, /Peanut Cookie Crunch/);
-  assert.match(answer("vegan flavors", catalog, []), /No matching/);
+  assert.match(answer("vegan flavors", catalog, []), /Coconut Cocoa/);
 });
 
 test("published catalog contains only the 46 researched flavor entries", () => {
@@ -280,4 +280,36 @@ test("customer answers rely on the main-page notice without repeating it", () =>
     { showNotices: false },
   );
   assert.match(dye, /Dyes \/ added colors: Unknown/);
+});
+
+test("questions search all shops by default and recognize named shops or cities", () => {
+  const actual = validateCatalog(data);
+  assert.match(
+    answer("How much protein in Vegan Vanilla?", actual),
+    /Vegan Vanilla/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla?", actual, []),
+    /Vegan Vanilla/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla in Billings Park?", actual),
+    /No matching/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla in Duluth?", actual),
+    /Vegan Vanilla/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla in Superior?", actual),
+    /No matching/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla in Canal Park, Duluth?", actual),
+    /No matching/,
+  );
+  assert.match(
+    answer("How much protein in Vegan Vanilla in Lincoln Park?", actual),
+    /Vegan Vanilla/,
+  );
 });
