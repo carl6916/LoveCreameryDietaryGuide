@@ -1,7 +1,13 @@
 import { useState } from "react";
 import type { Flavor } from "./logic";
 import { getFlavorPhoto } from "./flavorPhotos";
-export function FlavorImage({ flavor }: { flavor: Flavor }) {
+export function FlavorImage({
+  flavor,
+  compact = false,
+}: {
+  flavor: Flavor;
+  compact?: boolean;
+}) {
   const photo = getFlavorPhoto(flavor);
   const [failedPath, setFailedPath] = useState<string>();
   const showPhoto = photo && failedPath !== photo.path;
@@ -10,6 +16,14 @@ export function FlavorImage({ flavor }: { flavor: Flavor }) {
       <div
         className={`flavor-art${showPhoto ? " has-photo" : ""}`}
         style={{ background: flavor.color + "30" }}
+        {...(!showPhoto
+          ? {
+              role: "img",
+              "aria-label": flavor.demo
+                ? `Illustration for fictional flavor ${flavor.name}`
+                : `Illustration for ${flavor.name}; official photo unavailable`,
+            }
+          : {})}
       >
         {showPhoto ? (
           <img
@@ -29,19 +43,23 @@ export function FlavorImage({ flavor }: { flavor: Flavor }) {
             aria-hidden="true"
           />
         )}
-        <span>{flavor.demo ? "DEMONSTRATION" : "OFFICIAL MENU LISTING"}</span>
-      </div>
-      <figcaption>
-        {showPhoto ? (
-          <>
-            <a href={photo.source}>Photo: Love Creamery’s website ↗</a>
-          </>
-        ) : flavor.demo ? (
-          "Illustration for a fictional flavor"
-        ) : (
-          "Illustration — official flavor photo unavailable"
+        {!compact && (
+          <span>{flavor.demo ? "DEMONSTRATION" : "OFFICIAL MENU LISTING"}</span>
         )}
-      </figcaption>
+      </div>
+      {!compact && (
+        <figcaption>
+          {showPhoto ? (
+            <>
+              <a href={photo.source}>Photo: Love Creamery’s website ↗</a>
+            </>
+          ) : flavor.demo ? (
+            "Illustration for a fictional flavor"
+          ) : (
+            "Illustration — official flavor photo unavailable"
+          )}
+        </figcaption>
+      )}
     </figure>
   );
 }

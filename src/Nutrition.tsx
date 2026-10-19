@@ -7,7 +7,13 @@ import {
   ingredientFields,
   type Evidence,
 } from "./nutrition";
-export function NutritionPanel({ flavor: f }: { flavor: Flavor }) {
+export function NutritionPanel({
+  flavor: f,
+  expanded = false,
+}: {
+  flavor: Flavor;
+  expanded?: boolean;
+}) {
   const n = f.nutrition;
   return (
     <section
@@ -49,7 +55,7 @@ export function NutritionPanel({ flavor: f }: { flavor: Flavor }) {
           );
         })}
       </div>
-      <details>
+      <details open={expanded}>
         <summary>View all nutrition & ingredient details</summary>
         <table>
           <caption>{evidenceLabels[n.status]} · per serving above</caption>

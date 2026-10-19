@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import data from "./catalog.json";
-import { answer, classify, validateCatalog } from "./logic";
+import { answer, classify, validateCatalog, matchesLocations } from "./logic";
 const catalog = validateCatalog(data);
 test("vegan and gluten-free requirements are combined", () => {
   assert.equal(
@@ -211,4 +211,43 @@ test("all photo metadata matches official catalog records and bundled files", as
       statSync(new URL("../public/" + photo.path, import.meta.url)).size > 0,
     );
   }
+});
+
+test("location filtering combines selected shops without duplicate flavors", () => {
+  assert.equal(matchesLocations(catalog[0], []), false);
+  assert.equal(matchesLocations(catalog[0], ["billings"]), false);
+  assert.equal(matchesLocations(catalog[0], ["billings", "lincoln"]), true);
+  const result = catalog
+    .slice(0, 4)
+    .filter((f) => matchesLocations(f, ["canal", "lincoln"]));
+  assert.equal(result.length, 4);
+  assert.equal(result.filter((f) => f.id === "vanilla").length, 1);
+});
+test("assistant shares the selected location union and honors explicit shops", () => {
+  const text = answer("What flavors are vegan?", catalog.slice(0, 4), [
+    "canal",
+    "lincoln",
+  ]);
+  for (const name of [
+    "Coconut Cocoa",
+    "Summer Berry Sorbet",
+    "Vanilla Bean",
+    "Peanut Cookie Crunch",
+  ])
+    assert.ok(text.includes(name));
+  assert.equal((text.match(/Vanilla Bean/g) || []).length, 1);
+  const explicit = answer(
+    "vegan flavors in Billings Park",
+    catalog.slice(0, 4),
+    ["canal", "lincoln"],
+  );
+  assert.doesNotMatch(explicit, /Coconut Cocoa/);
+  const mentioned = answer(
+    "vegan flavors in Canal Park and Lincoln Park",
+    catalog.slice(0, 4),
+    ["billings"],
+  );
+  assert.match(mentioned, /Coconut Cocoa/);
+  assert.match(mentioned, /Peanut Cookie Crunch/);
+  assert.match(answer("vegan flavors", catalog, []), /No matching/);
 });

@@ -44,13 +44,14 @@ assert.match(
   await caramel.locator(".flavor-photo").getAttribute("src"),
   /flavors\/lc-salted-caramel\.jpg$/,
 );
-const apple = page
-  .locator(".flavor")
-  .filter({
-    has: page.getByRole("heading", { name: "Apple Cajeta", exact: true }),
-  });
+const apple = page.locator(".flavor").filter({
+  has: page.getByRole("heading", { name: "Apple Cajeta", exact: true }),
+});
 assert.equal(await apple.locator(".flavor-photo").count(), 0);
-assert.match(await apple.locator("figcaption").innerText(), /Illustration/);
+assert.equal(
+  await apple.getByRole("img", { name: /official photo unavailable/ }).count(),
+  1,
+);
 const decodedPhotos = await page.evaluate(async (photos) => {
   return await Promise.all(
     photos.map(async (photo) => {
@@ -63,25 +64,88 @@ const decodedPhotos = await page.evaluate(async (photos) => {
 }, Object.values(photoMetadata));
 assert.equal(decodedPhotos.length, 45);
 assert.ok(decodedPhotos.every(Boolean));
+// Result cards contain only image, name and description; all detail is in a modal.
+assert.equal(await page.locator(".results .nutrition-panel").count(), 0);
+assert.equal(await caramel.locator("dl, .badges, figcaption").count(), 0);
+const caramelButton = caramel.getByRole("button", {
+  name: "View details for Salted Caramel",
+  exact: true,
+});
+await caramelButton.focus();
+await caramelButton.press("Enter");
+const dialog = page.getByRole("dialog", {
+  name: "Salted Caramel",
+  exact: true,
+});
+await dialog.waitFor();
 assert.match(
-  await caramel.locator(".nutrition-panel").innerText(),
+  await dialog.locator(".nutrition-panel").innerText(),
   /FICTIONAL NUTRITION/,
 );
-await caramel
-  .getByText("View all nutrition & ingredient details", { exact: true })
-  .click();
-assert.match(await caramel.locator("table").innerText(), /Added sugars/);
+assert.match(await dialog.locator("table").innerText(), /Added sugars/);
 assert.match(
-  await caramel
+  await dialog
     .locator('.ingredient-facts dt:has-text("Dyes / added colors") + dd')
     .innerText(),
   /Unknown/,
 );
+for (const name of ["Canal Park", "Lincoln Park", "Billings Park"])
+  assert.match(
+    await dialog.getByRole("region", { name: "Store locations" }).innerText(),
+    new RegExp(name),
+  );
+assert.match(
+  await dialog.locator(".detail-allergy-warning").innerText(),
+  /Cross-contact/,
+);
+await page.keyboard.press("Shift+Tab");
+assert.ok(await dialog.evaluate((d) => d.contains(document.activeElement)));
+await dialog
+  .getByRole("button", { name: "Close flavor details", exact: true })
+  .click();
+assert.equal(await page.getByRole("dialog").count(), 0);
+assert.ok(await caramelButton.evaluate((el) => document.activeElement === el));
 await page
-  .getByLabel("Ask the flavor guide")
+  .locator("#question")
   .fill("How many calories and sugars in Salted Caramel?");
 await page.getByRole("button", { name: "Ask →", exact: true }).click();
 assert.match(await page.locator(".reply").innerText(), /FICTIONAL NUTRITION/);
+// Adding a shop uses OR semantics, and a shared flavor appears only once.
+await page.getByRole("button", { name: /Lincoln Park/ }).click();
+assert.equal(
+  await page.locator(".locations button[aria-pressed=true]").count(),
+  2,
+);
+await page.getByRole("button", { name: /Find My Flavors/ }).click();
+assert.equal(
+  await page.locator(".flavor").count(),
+  defaultCatalog.filter(
+    (f) =>
+      !f.demo && f.locations.some((id) => ["canal", "lincoln"].includes(id)),
+  ).length,
+);
+assert.equal(
+  await page
+    .getByRole("button", {
+      name: "View details for Salted Caramel",
+      exact: true,
+    })
+    .count(),
+  1,
+);
+await page.locator("#question").fill("How much protein in Vegan Vanilla?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
+await page.getByRole("button", { name: /Lincoln Park/ }).click();
+await page.getByRole("button", { name: /Canal Park/ }).click();
+assert.ok(
+  await page.getByRole("button", { name: /Find My Flavors/ }).isDisabled(),
+);
+assert.ok(
+  await page.getByRole("button", { name: "Ask →", exact: true }).isDisabled(),
+);
+await page.getByRole("button", { name: /Canal Park/ }).click();
+await page.getByRole("button", { name: /Find My Flavors/ }).click();
 await page.getByLabel("Catalog entries").selectOption("demo");
 assert.equal(await page.locator(".flavor").count(), 3);
 assert.equal(await page.locator(".flavor-photo").count(), 0);
@@ -107,14 +171,21 @@ assert.equal(
 );
 await page.getByRole("button", { name: /Billings Park/ }).click();
 await page.getByRole("button", { name: /Find My Flavors/ }).click();
+assert.equal(await page.locator(".flavor").count(), 4);
+assert.equal(
+  await page
+    .getByRole("button", { name: "View details for Vanilla Bean", exact: true })
+    .count(),
+  1,
+);
+await page.getByRole("button", { name: /Canal Park/ }).click();
+await page.getByRole("button", { name: /Find My Flavors/ }).click();
 assert.equal(await page.locator(".flavor").count(), 3);
 assert.equal(
   await page.locator(".flavor").filter({ hasText: "Coconut Cocoa" }).count(),
   0,
 );
-await page
-  .getByLabel("Ask the flavor guide")
-  .fill("Does Vanilla Bean contain eggs?");
+await page.locator("#question").fill("Does Vanilla Bean contain eggs?");
 await page.getByRole("button", { name: "Ask →", exact: true }).click();
 await page.locator(".reply").waitFor();
 assert.match(await page.locator(".reply").innerText(), /egg: contains/);
@@ -240,7 +311,36 @@ await page.getByLabel("Catalog entries").selectOption("demo");
 assert.equal(await page.locator(".flavor").count(), 3);
 await page.getByLabel("Search flavor names", { exact: true }).fill("Coconut");
 assert.equal(await page.locator(".flavor").count(), 1);
+const cocoaButton = page.getByRole("button", {
+  name: "View details for Coconut Cocoa",
+  exact: true,
+});
+await cocoaButton.click();
+const mobileDialog = page.getByRole("dialog", {
+  name: "Coconut Cocoa",
+  exact: true,
+});
+assert.match(
+  await mobileDialog
+    .getByRole("region", { name: "Store locations" })
+    .innerText(),
+  /Canal Park/,
+);
+assert.match(
+  await mobileDialog
+    .getByRole("region", { name: "Store locations" })
+    .innerText(),
+  /Lincoln Park/,
+);
+assert.ok(await mobileDialog.evaluate((d) => d.scrollWidth <= d.clientWidth));
+await page.keyboard.press("Escape");
+assert.equal(await page.getByRole("dialog").count(), 0);
+assert.ok(await cocoaButton.evaluate((el) => el === document.activeElement));
+await cocoaButton.click();
+await page.mouse.click(1, 1);
+assert.equal(await page.getByRole("dialog").count(), 0);
 await page.getByLabel("Search flavor names", { exact: true }).fill("");
+assert.equal(await page.locator(".flavor").count(), 3);
 assert.ok(
   await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
 );
@@ -308,21 +408,34 @@ await broken.getByRole("button", { name: /Find My Flavors/ }).click();
 await broken
   .getByLabel("Search flavor names", { exact: true })
   .fill("Salted Caramel");
-const brokenCard = broken
-  .locator(".flavor")
-  .filter({
-    has: broken.getByRole("heading", { name: "Salted Caramel", exact: true }),
-  });
+const brokenCard = broken.locator(".flavor").filter({
+  has: broken.getByRole("heading", { name: "Salted Caramel", exact: true }),
+});
 await brokenCard.locator(".flavor-art").scrollIntoViewIfNeeded();
 await brokenCard
+  .getByRole("img", { name: /official photo unavailable/ })
+  .waitFor();
+assert.equal(await brokenCard.locator(".flavor-photo").count(), 0);
+await brokenCard
+  .getByRole("button", { name: "View details for Salted Caramel", exact: true })
+  .click();
+const brokenDialog = broken.getByRole("dialog", {
+  name: "Salted Caramel",
+  exact: true,
+});
+await brokenDialog
   .getByText("Illustration — official flavor photo unavailable", {
     exact: true,
   })
   .waitFor();
-assert.equal(await brokenCard.locator(".flavor-photo").count(), 0);
+await brokenDialog
+  .getByRole("button", { name: "Ask about this flavor →", exact: true })
+  .click();
+assert.equal(await broken.getByRole("dialog").count(), 0);
+assert.match(await broken.locator(".reply").innerText(), /Salted Caramel/);
 await broken.close();
 assert.deepEqual(errors, []);
 console.log(
-  "Browser checks passed: filters, location switching, ingredient question, add/edit/archive/delete, refresh persistence, JSON roundtrip, invalid import, nutrition labels and editing, unknown dyes, legacy migration, all 45 official photos, missing/broken photo fallback, mobile overflow, no runtime errors.",
+  "Browser checks passed: filters, multiple-location union, compact cards, keyboard/mobile details and store locations, ingredient question, add/edit/archive/delete, refresh persistence, JSON roundtrip, invalid import, nutrition labels and editing, unknown dyes, legacy migration, all 45 official photos, missing/broken photo fallback, mobile overflow, no runtime errors.",
 );
 await browser.close();

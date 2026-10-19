@@ -39,6 +39,12 @@ export type Flavor = {
   ingredientsComplete: "yes" | "no" | "unknown";
 };
 export type Need = "vegan" | "gluten-free" | Allergen;
+export function matchesLocations(
+  flavor: Pick<Flavor, "locations">,
+  selectedLocations: readonly string[],
+): boolean {
+  return selectedLocations.some((id) => flavor.locations.includes(id));
+}
 export function classify(
   f: Flavor,
   needs: Need[],
@@ -119,7 +125,7 @@ export function validateCatalog(value: unknown): Flavor[] {
 export function answer(
   question: string,
   catalog: Flavor[],
-  location: string,
+  location: string | readonly string[],
   selected?: Flavor,
 ): string {
   const q = question.toLowerCase();
@@ -135,13 +141,16 @@ export function answer(
     sesame: /sesame|tahini/,
   };
   for (const a of allergens) if (aliases[a].test(q)) needs.push(a);
-  const loc = /canal/.test(q)
-    ? "canal"
-    : /lincoln/.test(q)
-      ? "lincoln"
-      : /billings|superior/.test(q)
-        ? "billings"
-        : location;
+  const mentionedLocations = [
+    ...(/canal/.test(q) ? ["canal"] : []),
+    ...(/lincoln/.test(q) ? ["lincoln"] : []),
+    ...(/billings|superior/.test(q) ? ["billings"] : []),
+  ];
+  const loc = mentionedLocations.length
+    ? mentionedLocations
+    : typeof location === "string"
+      ? [location]
+      : location;
   const named =
     catalog
       .filter((f) => q.includes(f.name.toLowerCase()))
@@ -152,7 +161,7 @@ export function answer(
   const candidates = catalog.filter(
     (f) =>
       !f.archived &&
-      f.locations.includes(loc) &&
+      matchesLocations(f, loc) &&
       (!named || f.id === named.id) &&
       (!/chocolate|cocoa/.test(q) ||
         /chocolate|cocoa/i.test(f.name + " " + f.ingredients)),

@@ -5,12 +5,14 @@ import locations from "./locations.json";
 import brand from "./brand.json";
 import research from "./research.json";
 import { emptyNutrition, emptyIngredientInfo } from "./nutrition";
-import { NutritionPanel, NutritionEditor } from "./Nutrition";
+import { NutritionEditor } from "./Nutrition";
+import { FlavorDetails } from "./FlavorDetails";
 import { FlavorImage } from "./FlavorImage";
 import {
   allergens,
   answer,
   classify,
+  matchesLocations,
   validateCatalog,
   type Flavor,
   type Need,
@@ -69,7 +71,8 @@ function BrandMark() {
 }
 function App() {
   const [catalog, setCatalog] = useState<Flavor[]>(load),
-    [loc, setLoc] = useState(""),
+    [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+    [detailFlavor, setDetailFlavor] = useState<Flavor>(),
     [needs, setNeeds] = useState<Need[]>([]),
     [applied, setApplied] = useState<Need[]>([]),
     [found, setFound] = useState(false),
@@ -95,7 +98,7 @@ function App() {
   }
   function ask(q: string) {
     setQuestion(q);
-    setReply(answer(q, activeCatalog, loc, selected));
+    setReply(answer(q, activeCatalog, selectedLocations, selected));
   }
   const activeCatalog = catalog.filter(
     (f) => catalogView === "all" || (catalogView === "demo" ? f.demo : !f.demo),
@@ -103,7 +106,7 @@ function App() {
   const visible = activeCatalog.filter(
     (f) =>
       !f.archived &&
-      f.locations.includes(loc) &&
+      matchesLocations(f, selectedLocations) &&
       f.name.toLowerCase().includes(flavorSearch.toLowerCase().trim()),
   );
   return (
@@ -228,6 +231,10 @@ function App() {
                     setNeeds([]);
                     setApplied([]);
                     setFound(false);
+                    setSelectedLocations([]);
+                    setFlavorSearch("");
+                    setSelected(undefined);
+                    setReply("");
                   }}
                 >
                   Reset filters ↺
@@ -237,14 +244,25 @@ function App() {
                 <span className="number">01</span>
                 <div className="step-content">
                   <h3>Where are you headed?</h3>
-                  <p>Choose a shop to explore its associated catalog.</p>
+                  <p>
+                    Choose one or more shops. Flavors listed at any selected
+                    shop appear once.
+                  </p>
                   <div className="locations">
                     {locations.map((l) => (
                       <button
                         key={l.id}
-                        className={"location " + (loc === l.id ? "chosen" : "")}
+                        className={
+                          "location " +
+                          (selectedLocations.includes(l.id) ? "chosen" : "")
+                        }
+                        aria-pressed={selectedLocations.includes(l.id)}
                         onClick={() => {
-                          setLoc(l.id);
+                          setSelectedLocations((current) =>
+                            current.includes(l.id)
+                              ? current.filter((id) => id !== l.id)
+                              : [...current, l.id],
+                          );
                           setFound(false);
                           setReply("");
                           setSelected(undefined);
@@ -253,7 +271,9 @@ function App() {
                         <span>⌖</span>
                         <strong>{l.name}</strong>
                         <small>{l.city}</small>
-                        {loc === l.id && <b>✓</b>}
+                        {selectedLocations.includes(l.id) && (
+                          <b aria-hidden="true">✓</b>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -293,7 +313,7 @@ function App() {
                   </div>
                   <button
                     className="primary"
-                    disabled={!loc}
+                    disabled={!selectedLocations.length}
                     onClick={() => {
                       setApplied([...needs]);
                       setFound(true);
@@ -301,7 +321,7 @@ function App() {
                   >
                     Find My Flavors <span>→</span>
                   </button>
-                  {!loc && (
+                  {!selectedLocations.length && (
                     <small className="hint">
                       Select a location to get started.
                     </small>
@@ -314,7 +334,13 @@ function App() {
                 <div className="section-title">
                   <div>
                     <span className="eyebrow">YOUR FLAVOR GUIDE</span>
-                    <h2>{locations.find((l) => l.id === loc)?.name} scoops</h2>
+                    <h2>
+                      {locations
+                        .filter((l) => selectedLocations.includes(l.id))
+                        .map((l) => l.name)
+                        .join(" + ")}{" "}
+                      scoops
+                    </h2>
                   </div>
                   <span>
                     {visible.length} catalog entries · Stock unconfirmed
@@ -379,63 +405,30 @@ function App() {
                         .filter((f) => classify(f, applied) === group)
                         .map((f) => (
                           <article className="flavor" key={f.id}>
-                            <FlavorImage flavor={f} />
-                            <div className="card-body">
-                              <h3>{f.name}</h3>
-                              <p>{f.description}</p>
-                              <div className="badges">
-                                <span>Vegan: {f.vegan}</span>
-                                <span>Gluten-free: {f.glutenFree}</span>
+                            <button
+                              type="button"
+                              className="flavor-card-button"
+                              aria-label={`View details for ${f.name}`}
+                              aria-haspopup="dialog"
+                              onClick={() => {
+                                setSelected(f);
+                                setDetailFlavor(f);
+                              }}
+                            >
+                              <FlavorImage flavor={f} compact />
+                              <div className="card-body">
+                                <h3>
+                                  {f.name}
+                                  {f.demo && (
+                                    <small className="fictional-name-note">
+                                      {" "}
+                                      (fictional example)
+                                    </small>
+                                  )}
+                                </h3>
+                                <p>{f.description}</p>
                               </div>
-                              <NutritionPanel flavor={f} />
-                              <dl>
-                                {allergens.map((a) => (
-                                  <React.Fragment key={a}>
-                                    <dt>{labels[a]}</dt>
-                                    <dd>{statusLabel[f.allergens[a]]}</dd>
-                                  </React.Fragment>
-                                ))}
-                              </dl>
-                              <p>
-                                <strong>Ingredients:</strong> {f.ingredients}
-                              </p>
-                              <p>
-                                <strong>Locations:</strong>{" "}
-                                {f.locations
-                                  .map(
-                                    (id) =>
-                                      locations.find((l) => l.id === id)?.name,
-                                  )
-                                  .join(", ")}
-                                <br />
-                                <strong>Availability:</strong> {f.availability}
-                                <br />
-                                <strong>Season:</strong> {f.season}
-                                <br />
-                                <strong>Listing checked:</strong>{" "}
-                                {f.verified || "Not verified — demonstration"}
-                                <br />
-                                <strong>Source:</strong> {f.source}
-                              </p>
-                              {f.demo && (
-                                <small>
-                                  “Verified” absence values describe this
-                                  fictional recipe only.
-                                </small>
-                              )}
-                              <button
-                                className="text-button"
-                                onClick={() => {
-                                  setSelected(f);
-                                  ask(`Does ${f.name} contain eggs?`);
-                                  document
-                                    .getElementById("assistant")
-                                    ?.scrollIntoView({ behavior: "smooth" });
-                                }}
-                              >
-                                Ask about this flavor →
-                              </button>
-                            </div>
+                            </button>
                           </article>
                         ))}
                     </div>
@@ -526,11 +519,16 @@ function App() {
                       placeholder="e.g. Which flavors contain eggs?"
                       required
                     />
-                    <button className="primary" disabled={!loc}>
+                    <button
+                      className="primary"
+                      disabled={!selectedLocations.length}
+                    >
                       Ask →
                     </button>
                   </div>
-                  {!loc && <small>Select a location first.</small>}
+                  {!selectedLocations.length && (
+                    <small>Select a location first.</small>
+                  )}
                 </form>
                 {reply && (
                   <div className="reply" role="status">
@@ -819,6 +817,26 @@ function App() {
           </p>
         </footer>
       </main>
+      {detailFlavor && (
+        <FlavorDetails
+          flavor={detailFlavor}
+          needs={applied}
+          onClose={() => setDetailFlavor(undefined)}
+          onAsk={() => {
+            setSelected(detailFlavor);
+            ask(`Does ${detailFlavor.name} contain eggs?`);
+            setDetailFlavor(undefined);
+            requestAnimationFrame(() => {
+              document
+                .getElementById("question")
+                ?.focus({ preventScroll: true });
+              document
+                .getElementById("assistant")
+                ?.scrollIntoView({ behavior: "smooth" });
+            });
+          }}
+        />
+      )}
     </>
   );
 }
