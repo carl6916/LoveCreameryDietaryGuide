@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import initial from "./catalog.json";
 import locations from "./locations.json";
+import brand from "./brand.json";
 import {
   allergens,
   answer,
@@ -38,6 +39,50 @@ const statusLabel = {
   absent: "Not listed as an ingredient (verified)",
   unknown: "Unknown",
 };
+function WingedScoop() {
+  return (
+    <svg
+      className="winged-scoop"
+      viewBox="0 0 150 100"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M51 43C33 45 19 36 8 24c-1 20 9 33 30 35M47 53C30 59 20 52 13 45c2 17 15 25 35 20M99 43c18 2 32-7 43-19 1 20-9 33-30 35M103 53c17 6 27-1 34-8-2 17-15 25-35 20" />
+      <path d="m55 57 20 34 20-34Z" fill="#f8da77" />
+      <path d="m62 68 14 10m-7-19 17 14m-1-11L71 83" strokeWidth="2" />
+      <path
+        d="M51 53c-5-7-2-15 5-18-1-12 8-22 20-21 12 0 21 10 20 21 7 4 9 12 4 18-5 6-12 4-17 0-5 5-12 5-17 0-5 5-11 5-15 0Z"
+        fill="#efb6c9"
+      />
+      <path d="m69 6 5-4m13 5 3-5m-36 8-3-4" strokeWidth="2" />
+    </svg>
+  );
+}
+function BrandMark() {
+  return (
+    <>
+      {brand.logoImage ? (
+        <img
+          className="official-logo"
+          src={brand.logoImage}
+          alt="Love Creamery"
+        />
+      ) : (
+        <>
+          <WingedScoop />
+          <span className="wordmark">
+            LOVE<span>CREAMERY</span>
+          </span>
+        </>
+      )}
+      <span className="guide-label">DIETARY GUIDE</span>
+    </>
+  );
+}
 function App() {
   const [catalog, setCatalog] = useState<Flavor[]>(load),
     [loc, setLoc] = useState(""),
@@ -73,7 +118,7 @@ function App() {
     <>
       <header>
         <a className="brand" href="#">
-          love<span>CREAMERY / DIETARY GUIDE</span>
+          <BrandMark />
         </a>
         <nav>
           <button
@@ -94,38 +139,76 @@ function App() {
       <main>
         <div className="hero">
           <div>
-            <div className="eyebrow">A LITTLE GUIDANCE. A LOT OF LOVE.</div>
+            <div className="eyebrow">SMALL-BATCH SPIRIT. BIG SCOOP ENERGY.</div>
             <h1>
-              Your next scoop,
+              Big scoop.
               <br />
-              <em>with a little clarity.</em>
+              <em>Little guesswork.</em>
             </h1>
             <p>
-              Explore flavors, check dietary details, and find the right
-              questions to ask before your next visit.
+              A little playful. A little particular. Explore the flavor guide,
+              find your preferences, and bring your ingredient questions to the
+              scoop counter.
             </p>
             <div className="hero-tags">
               <span>♡ Made for your preferences</span>
               <span>✧ Honest about the unknowns</span>
             </div>
           </div>
-          <div className="scoop-art" aria-hidden="true">
-            <div className="orbit">
-              a scoop for
+          <figure
+            className={
+              "hero-visual " + (brand.heroImage ? "has-photo" : "illustrated")
+            }
+          >
+            <div className="packaging-shape shape-circle" aria-hidden="true" />
+            <div className="packaging-shape shape-checker" aria-hidden="true" />
+            {brand.heroImage ? (
+              <img
+                className="hero-photo"
+                src={brand.heroImage}
+                alt={brand.heroAlt}
+                fetchPriority="high"
+              />
+            ) : (
+              <div className="pint-scene" aria-hidden="true">
+                <div className="pint pint-pink">
+                  <div className="pint-lid" />
+                  <WingedScoop />
+                  <span>
+                    LOVE
+                    <br />
+                    CREAMERY
+                  </span>
+                  <div className="pint-pattern" />
+                </div>
+                <div className="pint pint-blue">
+                  <div className="pint-lid" />
+                  <WingedScoop />
+                  <span>
+                    LOVE
+                    <br />
+                    CREAMERY
+                  </span>
+                  <div className="pint-pattern" />
+                </div>
+                <span className="scene-spark">✦</span>
+              </div>
+            )}
+            <span className="scoop-sticker" aria-hidden="true">
+              made with
               <br />
-              <i>every kind of you</i>
-            </div>
-            <div className="scoop one" />
-            <div className="scoop two" />
-            <div className="scoop three" />
-            <div className="cup">
-              love<span>CREAMERY</span>
-            </div>
-            <span className="spark">✦</span>
-          </div>
+              <b>a little love</b>
+              <span>✦</span>
+            </span>
+            <figcaption>
+              {brand.heroImage
+                ? brand.heroCredit
+                : "Packaging-inspired illustration · not a product photograph"}
+            </figcaption>
+          </figure>
         </div>
         <aside className="safety">
-          <strong>♡ A note about allergies</strong>
+          <strong>Allergies? Read this first.</strong>
           <p>
             Love Creamery is not an allergen-free facility. Cross-contact may
             occur. Vegan and gluten-free labels do not guarantee allergy safety.
@@ -149,7 +232,7 @@ function App() {
               <div className="section-title">
                 <div>
                   <span className="eyebrow">LET’S FIND YOUR SCOOP</span>
-                  <h2>A few things about you</h2>
+                  <h2>Let’s find your kind of scoop.</h2>
                 </div>
                 <button
                   className="text-button"
@@ -646,7 +729,7 @@ function App() {
         )}
         <footer>
           <span className="brand">
-            love<span>A LITTLE MORE INFORMED. A LITTLE MORE YOU.</span>
+            <BrandMark />
           </span>
           <p>
             Independent prototype · Not affiliated with or endorsed by Love
