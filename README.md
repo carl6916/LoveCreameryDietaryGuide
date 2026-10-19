@@ -15,13 +15,21 @@ Open the address printed by Vite. `npm run build` type-checks and produces `dist
 
 ## Customer workflow
 
-Choose Canal Park, Lincoln Park, or Billings Park, select any combination of restrictions, then click **Find My Flavors**. Change location by selecting another shop and searching again. Reset clears restrictions. Results explicitly separate matches, missing information, and conflicts. Cards document ingredients, each allergen, provenance, verification, season, and availability. An unknown availability value never establishes current stock.
+Choose Canal Park, Lincoln Park, or Billings Park, select any combination of restrictions, then click **Find My Flavors**. Change location by selecting another shop and searching again. Reset clears restrictions. Results explicitly separate matches, missing information, and conflicts. Cards document ingredients, each allergen, provenance, verification, season, availability, and nutrition. The catalog selector separates official menu listings from fictional demonstration flavors; name search narrows large result lists. An unknown availability value never establishes current stock.
 
-The question guide uses local keywords, synonyms, full flavor names, store names, and the same classification function as filtering. It can report ingredients or allergen status and describe why entries match. “Ask about this flavor” selects context. The guide lists conflicts and unknowns explicitly alongside matches; do not interpret every returned entry as a recommendation. Unsupported questions prompt supported examples. It cannot interpret every phrase, discover information, or check live inventory.
+The question guide uses local keywords, synonyms, full flavor names, store names, and the same classification function as filtering. It can report ingredients, allergen status, calories, sugars, protein, and other stored nutrition facts. Try “How many calories and sugars in Salted Caramel?” or “Does Salted Caramel have dyes?” Invented values are always identified as fictional; unknown ingredient fields remain unknown. “Ask about this flavor” selects context. The guide lists conflicts and unknowns explicitly alongside matches; do not interpret every returned entry as a recommendation. Unsupported questions prompt supported examples. It cannot interpret every phrase, discover information, or check live inventory.
 
-## Data and safety
+## Data, nutrition, and provenance
 
-All bundled flavors are **fictional demonstration data**, not verified Love Creamery products. The initial catalog was created while the official website was unavailable. Later access to brand imagery has not independently verified any real recipe, allergen status, or stock. Absence values in demonstrations refer only to fictional recipes. Reference resources: https://lovecreamery.com/ice-cream-flavors/ and https://lovecreamery.com/faqs/ .
+The catalog contains **46 source-documented Love Creamery flavor listings** collected from the official flavors page on October 19, 2026, plus the four clearly labeled fictional demonstration flavors. Names, descriptions, GF/V/S badges, and location associations come from https://www.lovecreamery.com/ice-cream-flavors/ . These listings combine scoops and pint associations and do not establish live stock or a serving format. A generic nuts badge does not establish whether a specific nut or peanut is present; unknown allergy fields stay unknown. Only specifically described ingredients or explicit labels are used as evidence.
+
+**All seeded numeric nutrition values and their serving sizes are fictional.** They were invented for testing, not measured, calculated from recipes, or inferred from the official descriptions. Each card repeats this warning directly above the numbers, and the assistant repeats it in nutrition answers. Do not use invented values for medical diets or nutrition decisions.
+
+Nutrition storage includes serving description and mass; calories; total, saturated, and trans fat; cholesterol; sodium; total carbohydrates; fiber; total and added sugars; and protein. Values are per stored serving with explicit kcal/g/mg units. `null` means unknown and is never treated as zero. Nutrition has its own documented/fictional/unknown status, source, and verification date, independent of whether the flavor name is real. Documented values require source/date evidence; inconsistent totals, negative or nonnumeric values, missing serving descriptions, and invalid dates are rejected.
+
+Ingredient facts include base/milk type, sweeteners, dyes/added colors, artificial flavors, preservatives, sugar alcohols, caffeine, and alcohol. Each field has its own evidence status. Real flavor descriptions are partial ingredient information, never full recipes. Missing additive details remain unknown; no dye-free or allergen-free conclusion is drawn from missing information. Demo flavors include explicitly fictional ingredient examples. Documented ingredient fields share an editable source and checked date.
+
+The official flavors page, FAQ, three individual flavor pages, and official site/media searches were checked. No per-flavor nutrition table was found in those sources. The FAQ's 18–19% butterfat figure is general information, not per-serving total fat, and is not used to compute nutrition. Research findings and exact sources are in `src/research.json`; this is a limited official-source search, not a claim that information exists nowhere else. The app does not independently authenticate future editor-supplied values.
 
 Love Creamery is not an allergen-free facility; cross-contact may occur. A recipe match is never a guarantee of allergy safety. Vegan is independent of milk allergen status. Gluten-free does not establish protection from cross-contact. Unknown is not absence. Customers with serious allergies must confirm ingredients and preparation practices directly with the shop.
 
@@ -29,9 +37,11 @@ Love Creamery is not an allergen-free facility; cross-contact may occur. A recip
 
 Open **Manage catalog** to add, edit, archive, restore, or delete flavors. Every allergen has an explicit Contains / Not listed as an ingredient (verified) / Unknown value. Set independent vegan and gluten-free values. Real entries require a source and verification date; editors are responsible for accurate evidence. Dates are not automatically refreshed or independently verified by the application.
 
+Older catalogs without the new fields automatically receive unknown values without changing existing names, ingredients, or edits. The browser storage key stays `love-creamery-catalog-v1` for compatibility. If you already have a saved catalog, **Add latest shop listings** adds missing official entries without overwriting existing records; repeating it does not create duplicates. Existing edited or deleted records are never silently replaced with new defaults. Explicitly adding latest listings can restore a missing researched entry. New nutrition values in an old custom record remain unknown until edited.
+
 Changes are saved under `love-creamery-catalog-v1` in browser localStorage. They persist after refresh only in that browser and origin. Storage can be cleared or unavailable; save failures are displayed. There is no secure administrator authentication and no shared multi-user publishing. Export JSON for backups; import validates the full schema and asks before replacing the browser catalog. Imported real data is user supplied, not independently authenticated. Do not store confidential information.
 
-For shared defaults, update `src/catalog.json` and redeploy the built static site. Locations are editable in `src/locations.json`; import validation reads the location IDs from the same file. The default catalog and application use no external runtime requests, images, or fonts. All illustrations are CSS.
+For shared defaults, update `src/catalog.json` and redeploy the built static site. Locations are editable in `src/locations.json`; import validation reads the location IDs from the same file. The application uses no external runtime requests or fonts. Brand photographs are stored locally; demonstration flavor illustrations are CSS.
 
 ## Automated browser checks
 
@@ -39,7 +49,9 @@ With the dev server running, run `npx playwright install chromium` once, then `n
 
 ## Manual acceptance checks
 
-- Choose each location and search; confirm only associated, nonarchived entries appear.
+- Choose each location and search; confirm only associated, nonarchived entries appear. Select **Fictional demonstration flavors** for the original four test flavors; official menu listings are shown by default.
+- On an official flavor card, check that nutrition is explicitly fictional, all quantities have units and a serving, and unreported dyes remain unknown. Expand the panel for the complete stored fields.
+- In the editor, set nutrition evidence, serving, values, and ingredient evidence. Save, refresh, export, and reimport to verify all new fields persist. Clear a number to represent unknown rather than zero.
 - Vegan + gluten-free: Coconut Cocoa and Summer Berry match at Canal Park. Adding milk allergy moves Coconut Cocoa to Needs confirmation.
 - Peanut allergy: Summer Berry matches its fictional recipe, Vanilla Bean needs confirmation, Peanut Cookie Crunch conflicts at Billings Park.
 - Ask “Does Vanilla Bean contain eggs?” and “Does Coconut Cocoa contain milk?”; expect contains and unknown respectively.
@@ -64,4 +76,4 @@ The design uses approximate sky blue, soft yellow, pink, warm cream, and chocola
 
 Sources and original URLs are documented in `public/brand/README.md`. The packaging portfolio describes work from 2020–2022; images are brand references, not evidence of current recipes or stock. The logo and cups image were matched visually to the supplied references. The low-resolution storefront image embedded in chat was not available as a downloadable file; the supporting section uses a documented Lincoln Park photograph from the official site instead.
 
-Edit `src/brand.json` to change local images, alt text, or credits. Put assets in `public/brand/` and use relative paths such as `brand/ice-cream.jpg` without a leading slash for GitHub Pages compatibility. Brand imagery must never be associated with fictional flavor cards as if it verified their ingredients or allergens. The bundled flavor catalog remains entirely fictional.
+Edit `src/brand.json` to change local images, alt text, or credits. Put assets in `public/brand/` and use relative paths such as `brand/ice-cream.jpg` without a leading slash for GitHub Pages compatibility. Brand imagery must never be associated with fictional flavor cards as if it verified their ingredients or allergens. Official flavor descriptions and fictional nutrition are independently labeled. Real photography establishes neither recipe composition nor nutrition.

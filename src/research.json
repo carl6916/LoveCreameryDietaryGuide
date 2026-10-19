@@ -1,0 +1,16 @@
+{
+  "checked": "2026-10-19",
+  "sources": [
+    {
+      "url": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "finding": "Flavor names, descriptions, GF/V/S/N/A badges, and location associations. No per-serving nutrition table found."
+    },
+    {
+      "url": "https://www.lovecreamery.com/faqs/",
+      "finding": "General base uses egg yolks; vegan bases vary; facility is not nut-free or gluten-free; butterfat is described as 18\u201319%, not per-serving fat grams."
+    }
+  ],
+  "searches": "Official WordPress site searches for nutrition, nutritional, and calories returned no results; media search for nutrition returned no results. Checked individual Dark Chocolate, Salted Caramel, and Vegan Chai pages. This is a limited official-source search, not proof that no nutrition information exists anywhere.",
+  "nutritionNotice": "All seeded numeric nutrition values and serving sizes are fictional, not measurements, estimates, or official nutrition labels. Unknown additive information is not inferred from missing labels.",
+  "officialFlavorCount": 46
+}

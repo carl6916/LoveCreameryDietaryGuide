@@ -1,4 +1,13 @@
 import locations from "./locations.json";
+import {
+  validateNutrition,
+  validateIngredientInfo,
+  nutritionSummary,
+  ingredientFields,
+  evidenceLabels,
+  type Nutrition,
+  type IngredientInfo,
+} from "./nutrition";
 export const allergens = [
   "milk",
   "egg",
@@ -25,6 +34,9 @@ export type Flavor = {
   source: string;
   demo: boolean;
   archived: boolean;
+  nutrition: Nutrition;
+  ingredientInfo: IngredientInfo;
+  ingredientsComplete: "yes" | "no" | "unknown";
 };
 export type Need = "vegan" | "gluten-free" | Allergen;
 export function classify(
@@ -52,6 +64,7 @@ export function validateCatalog(value: unknown): Flavor[] {
   if (!Array.isArray(value) || value.length > 1000)
     throw Error("Expected an array of up to 1,000 flavors.");
   const ids = new Set();
+  const normalized: Flavor[] = [];
   for (const f of value) {
     if (
       !f ||
@@ -88,9 +101,20 @@ export function validateCatalog(value: unknown): Flavor[] {
       throw Error(
         "Invalid catalog: check fields, unique IDs, source, verification date, and explicit allergen values.",
       );
+    if (
+      f.ingredientsComplete !== undefined &&
+      !["yes", "no", "unknown"].includes(f.ingredientsComplete)
+    )
+      throw Error("Invalid ingredient-list completeness.");
     ids.add(f.id);
+    normalized.push({
+      ...f,
+      ingredientsComplete: f.ingredientsComplete ?? "unknown",
+      nutrition: validateNutrition(f.nutrition),
+      ingredientInfo: validateIngredientInfo(f.ingredientInfo),
+    });
   }
-  return value as Flavor[];
+  return normalized;
 }
 export function answer(
   question: string,
@@ -119,7 +143,9 @@ export function answer(
         ? "billings"
         : location;
   const named =
-    catalog.find((f) => q.includes(f.name.toLowerCase())) ||
+    catalog
+      .filter((f) => q.includes(f.name.toLowerCase()))
+      .sort((a, b) => b.name.length - a.name.length)[0] ||
     (/this flavor|this flavour/.test(q) ? selected : undefined);
   if (/this flavou?r/.test(q) && !named)
     return "Select “Ask about this flavor” on a card first, or type its full name.";
@@ -131,6 +157,39 @@ export function answer(
       (!/chocolate|cocoa/.test(q) ||
         /chocolate|cocoa/i.test(f.name + " " + f.ingredients)),
   );
+  if (
+    /nutrition|calorie|kcal|sugar|protein|carb|fiber|fibre|sodium|cholesterol|fat|\bsalt\b|dye|color|colour|red\s*40|yellow\s*[56]|blue\s*[12]|fd&c|sweetener|caffeine|alcohol|preservative|artificial|base|ingredient/.test(
+      q,
+    )
+  ) {
+    const requestedFacts = ingredientFields.filter((f) =>
+      ({
+        base: /base|milk type/,
+        sweeteners: /sweetener|sugar/,
+        dyes: /dye|color|colour|red\s*40|yellow\s*[56]|blue\s*[12]|fd&c/,
+        artificialFlavors: /artificial|flavou?ring/,
+        preservatives: /preservative/,
+        sugarAlcohols: /sugar.alcohol|sweetener/,
+        caffeine: /caffeine|coffee/,
+        alcohol: /alcohol/,
+      })[f.key].test(q),
+    );
+    const wantsNutrition =
+      /nutrition|calorie|kcal|sugar|protein|carb|fiber|fibre|sodium|cholesterol|fat|\bsalt\b/.test(
+        q,
+      );
+    return (
+      (candidates.length
+        ? candidates
+            .map(
+              (f) =>
+                `${f.name}${f.demo ? " [DEMONSTRATION FLAVOR]" : " [OFFICIAL MENU LISTING]"}${needs.length ? `\nDietary check: ${classify(f, needs)}` : ""}\n${wantsNutrition ? nutritionSummary(f.nutrition) : ""}${requestedFacts.map((field) => `\n${field.label}: ${f.ingredientInfo.fields[field.key].value} [${evidenceLabels[f.ingredientInfo.fields[field.key].status]}]`).join("")}${requestedFacts.length && f.ingredientInfo.source ? `\nIngredient source: ${f.ingredientInfo.source}; checked ${f.ingredientInfo.verified || "Unknown"}` : ""}${/ingredient/.test(q) ? `\nIngredient description (${f.ingredientsComplete === "yes" ? "complete list" : "partial or unconfirmed list"}): ${f.ingredients}` : ""}`,
+            )
+            .join("\n\n")
+        : "No matching catalog entries for that flavor and location.") +
+      "\n\nFictional numbers are invented demonstrations, not estimates, nutrition labels, or guidance for medical diets. Missing dye and ingredient information stays unknown. Confirm real nutrition and preparation practices directly with Love Creamery."
+    );
+  }
   if (!needs.length && !named && !/flavor|flavour|available|ingredient/.test(q))
     return "I can look up documented dietary labels, ingredients, allergens, and locations. Try “Which flavors are vegan and gluten-free?” I cannot verify missing information; contact Love Creamery directly.";
   const lines = candidates.map(

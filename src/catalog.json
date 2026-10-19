@@ -21,7 +21,64 @@
     "verified": "",
     "source": "Fictional demonstration recipe; not a Love Creamery product",
     "demo": true,
-    "archived": false
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientsComplete": "yes",
+    "ingredientInfo": {
+      "source": "",
+      "verified": "",
+      "fields": {
+        "base": {
+          "status": "fictional",
+          "value": "Coconut milk"
+        },
+        "sweeteners": {
+          "status": "fictional",
+          "value": "Sugar (fictional recipe)"
+        },
+        "dyes": {
+          "status": "fictional",
+          "value": "No added colors in this fictional example"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    }
   },
   {
     "id": "berry",
@@ -45,7 +102,64 @@
     "verified": "",
     "source": "Fictional demonstration recipe; not a Love Creamery product",
     "demo": true,
-    "archived": false
+    "archived": false,
+    "nutrition": {
+      "calories": 160,
+      "totalFat": 0,
+      "saturatedFat": 0,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 10,
+      "carbohydrates": 40,
+      "fiber": 1,
+      "totalSugars": 34,
+      "addedSugars": 25,
+      "protein": 0,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientsComplete": "yes",
+    "ingredientInfo": {
+      "source": "",
+      "verified": "",
+      "fields": {
+        "base": {
+          "status": "fictional",
+          "value": "Fruit and water"
+        },
+        "sweeteners": {
+          "status": "fictional",
+          "value": "Sugar (fictional recipe)"
+        },
+        "dyes": {
+          "status": "fictional",
+          "value": "No added colors in this fictional example"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    }
   },
   {
     "id": "vanilla",
@@ -69,7 +183,64 @@
     "verified": "",
     "source": "Fictional demonstration recipe; not a Love Creamery product",
     "demo": true,
-    "archived": false
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientsComplete": "yes",
+    "ingredientInfo": {
+      "source": "",
+      "verified": "",
+      "fields": {
+        "base": {
+          "status": "fictional",
+          "value": "Milk and cream"
+        },
+        "sweeteners": {
+          "status": "fictional",
+          "value": "Sugar (fictional recipe)"
+        },
+        "dyes": {
+          "status": "fictional",
+          "value": "No added colors in this fictional example"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    }
   },
   {
     "id": "cookie",
@@ -93,6 +264,3789 @@
     "verified": "",
     "source": "Fictional demonstration recipe; not a Love Creamery product",
     "demo": true,
-    "archived": false
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientsComplete": "no",
+    "ingredientInfo": {
+      "source": "",
+      "verified": "",
+      "fields": {
+        "base": {
+          "status": "fictional",
+          "value": "Milk"
+        },
+        "sweeteners": {
+          "status": "fictional",
+          "value": "Sugar (fictional recipe)"
+        },
+        "dyes": {
+          "status": "fictional",
+          "value": "Example: Red 40 in fictional cookie decorations"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    }
+  },
+  {
+    "id": "lc-apple-cajeta",
+    "name": "Apple Cajeta",
+    "description": "Bayfield Apple Co apple butter and cinnamon swirled with cajeta for our version of a Caramel Apple on a stick. Cajeta is a slow cooked caramel made from goats milk.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Bayfield Apple Co apple butter and cinnamon swirled with cajeta for our version of a Caramel Apple on a stick. Cajeta is a slow cooked caramel made from goats milk.",
+    "color": "#a47764",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-blackberry-chip",
+    "name": "Blackberry Chip",
+    "description": "A luscious blackberry ice cream made with real berries, freckled throughout with dark chocolate flecks.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: A luscious blackberry ice cream made with real berries, freckled throughout with dark chocolate flecks.",
+    "color": "#cd778a",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-buttermilk-vanilla",
+    "name": "Buttermilk Vanilla",
+    "description": "Organic Madagascar vanilla paired with buttermilk and Tahitian vanilla beans. No vanilla skimping here.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Organic Madagascar vanilla paired with buttermilk and Tahitian vanilla beans. No vanilla skimping here.",
+    "color": "#e6cc91",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-carrot-cake",
+    "name": "Carrot Cake",
+    "description": "House-made gluten-free carrot cake blended with delicious local maple syrup and cream cheese. Topped off with more hunks of carrot cake, pecans, and a cream cheese swirl. Contains nuts.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: House-made gluten-free carrot cake blended with delicious local maple syrup and cream cheese. Topped off with more hunks of carrot cake, pecans, and a cream cheese swirl. Contains nuts. Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#bf9460",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "maple syrup mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-dark-chocolate",
+    "name": "Dark Chocolate",
+    "description": "This chocolate is for hard-core chocolate lovers. We add a lot of 100% organic dark chocolate for pure decadence, and because we can.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This chocolate is for hard-core chocolate lovers. We add a lot of 100% organic dark chocolate for pure decadence, and because we can.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-honey-lavender",
+    "name": "Honey Lavender",
+    "description": "This was one of our first flavors we ever made back in 2010. We steep lavender flowers in cream and add a touch of local Deez Beez honey for a floral and subtle magical flavor.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This was one of our first flavors we ever made back in 2010. We steep lavender flowers in cream and add a touch of local Deez Beez honey for a floral and subtle magical flavor.",
+    "color": "#cd778a",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-key-lime-pie",
+    "name": "Key Lime Pie",
+    "description": "We make lime curd and add it to this fresh flavor along with a gf graham cracker pie crust. It is the pie in an ice cream flavor form.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We make lime curd and add it to this fresh flavor along with a gf graham cracker pie crust. It is the pie in an ice cream flavor form.",
+    "color": "#e6cc91",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-mint-chocolate-chip",
+    "name": "Mint Chocolate Chip",
+    "description": "This clean and crisp mint flavor comes from pure peppermint and a freckling of 70% dark organic chocolate. A fan favorite.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This clean and crisp mint flavor comes from pure peppermint and a freckling of 70% dark organic chocolate. A fan favorite.",
+    "color": "#bf9460",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-pumpkin-spice-cheesecake",
+    "name": "Pumpkin Spice Cheesecake",
+    "description": "We make our pumpkin spiced ice cream with real pumpkin then mix in housemade cheesecake bites for an extra decadent fall treat.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We make our pumpkin spiced ice cream with real pumpkin then mix in housemade cheesecake bites for an extra decadent fall treat.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-salted-caramel",
+    "name": "Salted Caramel",
+    "description": "Sweet, salty, creamy, caramelly and oh so good. Raw cane sugar cooked with cream and sprinkled with French grey sea salt. This is a fan favorite.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Sweet, salty, creamy, caramelly and oh so good. Raw cane sugar cooked with cream and sprinkled with French grey sea salt. This is a fan favorite.",
+    "color": "#cd778a",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "raw cane sugar mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-salted-honey-honeycomb",
+    "name": "Salted Honey Honeycomb",
+    "description": "We make a lush, lightly salted honey ice cream using local Deez Beez honey, and mix in plenty of our famous house-made honeycomb candy.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We make a lush, lightly salted honey ice cream using local Deez Beez honey, and mix in plenty of our famous house-made honeycomb candy.",
+    "color": "#e6cc91",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-sorbet",
+    "name": "Sorbet",
+    "description": "Our sorbets are made with real fruit and we change these flavors out often enough that we just list good old sorbet online. A refreshing treat which is also great in a kombucha float.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our sorbets are made with real fruit and we change these flavors out often enough that we just list good old sorbet online. A refreshing treat which is also great in a kombucha float.",
+    "color": "#bf9460",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 160,
+      "totalFat": 0,
+      "saturatedFat": 0,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 10,
+      "carbohydrates": 40,
+      "fiber": 1,
+      "totalSugars": 34,
+      "addedSugars": 25,
+      "protein": 0,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-spicy-hot-chocolate",
+    "name": "Spicy Hot Chocolate",
+    "description": "Creamy milk chocolate with cinnamon, guajillo chili, panela make for a sweet heat chocolate treat.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Creamy milk chocolate with cinnamon, guajillo chili, panela make for a sweet heat chocolate treat.",
+    "color": "#a47764",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "panela mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-cashew-brownie",
+    "name": "Vegan Cashew Brownie",
+    "description": "Our wonderfully rich and creamy cashew based vegan ice cream sprinkled with big bites of house-made vegan, gluten free brownies.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our wonderfully rich and creamy cashew based vegan ice cream sprinkled with big bites of house-made vegan, gluten free brownies. Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#cd778a",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-cinnamon-snickerdoodle",
+    "name": "Vegan Cinnamon Snickerdoodle",
+    "description": "Our vegan coconut base stepped in cinnamon with our homemade vegan and gluten free snickerdoodle cookies tossed in.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our vegan coconut base stepped in cinnamon with our homemade vegan and gluten free snickerdoodle cookies tossed in.",
+    "color": "#e6cc91",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-s-mores",
+    "name": "Vegan S’mores",
+    "description": "This chocolatey sunflower milk vegan ice cream is loaded with vegan marshmallows, gf graham crackers and more chocolate for our spin on the classic dessert folks died for in “The Menu.”",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This chocolatey sunflower milk vegan ice cream is loaded with vegan marshmallows, gf graham crackers and more chocolate for our spin on the classic dessert folks died for in “The Menu.”",
+    "color": "#bf9460",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "contains",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Sunflower / sunbutter base, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-basil-raspberry",
+    "name": "Basil Raspberry",
+    "description": "We steep cream in sweet basil from the Challenge Center in Superior WI, strain and spin it into an earthy, unique ice cream base, and finally ripple in raspberry jam for an opposites-attract, farm-to-cone treat.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We steep cream in sweet basil from the Challenge Center in Superior WI, strain and spin it into an earthy, unique ice cream base, and finally ripple in raspberry jam for an opposites-attract, farm-to-cone treat.",
+    "color": "#a47764",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-butter-pecan",
+    "name": "Butter Pecan",
+    "description": "This classic has a smooth creamy buttery flavor and is dabbled with our house toasted organic Missouri pecans.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This classic has a smooth creamy buttery flavor and is dabbled with our house toasted organic Missouri pecans. Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#cd778a",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-chamomile-honeycomb",
+    "name": "Chamomile Honeycomb",
+    "description": "Another fan favorite. Cream steeped in chamomile flowers with the added sweet caramel crunchiness of homemade honeycomb tossed in.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Another fan favorite. Cream steeped in chamomile flowers with the added sweet caramel crunchiness of homemade honeycomb tossed in.",
+    "color": "#e6cc91",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-cookie-butter",
+    "name": "Cookie Butter",
+    "description": "We take spiced cookie butter spread and add it directly into the ice cream, then ripple another ribbon of cookie butter in for a mouth watering scoop you won’t be able to stop eating.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We take spiced cookie butter spread and add it directly into the ice cream, then ripple another ribbon of cookie butter in for a mouth watering scoop you won’t be able to stop eating.",
+    "color": "#bf9460",
+    "vegan": "unknown",
+    "glutenFree": "unknown",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "contains",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-cookie-dough",
+    "name": "Cookie Dough",
+    "description": "We make a special cookie dough ice cream and then load it up with house-made gf cookie dough bites.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We make a special cookie dough ice cream and then load it up with house-made gf cookie dough bites.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-espresso-brownie-fudge",
+    "name": "Espresso Brownie Fudge",
+    "description": "Espresso ice cream made with local Duluth Coffee Company brew, then mixed with our house-made gluten-free brownies and house-made espresso fudge.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Espresso ice cream made with local Duluth Coffee Company brew, then mixed with our house-made gluten-free brownies and house-made espresso fudge.",
+    "color": "#cd778a",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "documented",
+          "value": "Coffee / espresso mentioned; caffeine amount is unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-goat-cheese-with-brandied-cherries",
+    "name": "Goat Cheese with Brandied Cherries",
+    "description": "We add goat cheese to the base for a little fat and tang and then toss in tart Michigan cherries that are dried and then soaked in brandy.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We add goat cheese to the base for a little fat and tang and then toss in tart Michigan cherries that are dried and then soaked in brandy.",
+    "color": "#e6cc91",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "documented",
+          "value": "Contains alcohol (official menu A badge); quantity unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-lime-sherbet",
+    "name": "Lime Sherbet",
+    "description": "Pucker up for this sweet & sour taste of summer. Just like the sherbet your grew up with, but maybe with a little more lime flavor:) Pairs well with buttermilk vanilla too.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Pucker up for this sweet & sour taste of summer. Just like the sherbet your grew up with, but maybe with a little more lime flavor:) Pairs well with buttermilk vanilla too.",
+    "color": "#bf9460",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-london-fog",
+    "name": "London Fog",
+    "description": "Just like the creamy tea drink this flavor is steeped with earl grey tea and honey and we add a little lavender to top if off.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Just like the creamy tea drink this flavor is steeped with earl grey tea and honey and we add a little lavender to top if off.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-monster-cookie",
+    "name": "Monster Cookie",
+    "description": "Peanut butter ice cream, jam-packed with flecks of dark chocolate, GF oatmeal crumble, and milk chocolate candies. This flavor was a custom flavor we made for the Olson’s wedding and it’s now a fan favorite. Thanks Paige and Kale!",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Peanut butter ice cream, jam-packed with flecks of dark chocolate, GF oatmeal crumble, and milk chocolate candies. This flavor was a custom flavor we made for the Olson’s wedding and it’s now a fan favorite. Thanks Paige and Kale! Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#cd778a",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "contains",
+      "tree nut": "unknown",
+      "soy": "contains",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-salted-chocolate-brownie",
+    "name": "Salted Chocolate Brownie",
+    "description": "A dark chocolate base slightly salted and layered with our decadent house-made gluten free brownies.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: A dark chocolate base slightly salted and layered with our decadent house-made gluten free brownies.",
+    "color": "#e6cc91",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-strawberry",
+    "name": "Strawberry",
+    "description": "This is a quintessential ice cream flavor. Strawberry ice cream sprinkled with organic freeze dried strawberries.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This is a quintessential ice cream flavor. Strawberry ice cream sprinkled with organic freeze dried strawberries.",
+    "color": "#bf9460",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-chai",
+    "name": "Vegan Chai",
+    "description": "This coconut milk vegan ice cream is infused with local Zenith Tea Company chai mix to make a spicy, dreamy dairy-free delight.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This coconut milk vegan ice cream is infused with local Zenith Tea Company chai mix to make a spicy, dreamy dairy-free delight.",
+    "color": "#a47764",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-cinnamon-streusel",
+    "name": "Vegan Cinnamon Streusel",
+    "description": "Cinnamon coconut-based vegan ice cream loaded with house-made streusel",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Cinnamon coconut-based vegan ice cream loaded with house-made streusel",
+    "color": "#cd778a",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-cookie-dough",
+    "name": "Vegan Cookie Dough",
+    "description": "Our dairy version done vegan style! Cookie dough is a coconut base with lots of yummy vegan and gluten free chocolate chip cookie dough chunks.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our dairy version done vegan style! Cookie dough is a coconut base with lots of yummy vegan and gluten free chocolate chip cookie dough chunks.",
+    "color": "#e6cc91",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-salted-chocolate-brownie",
+    "name": "Vegan Salted Chocolate Brownie",
+    "description": "Silky smooth sunbutter-based vegan chocolate ice cream loaded with house made vegan gluten-free brownies.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Silky smooth sunbutter-based vegan chocolate ice cream loaded with house made vegan gluten-free brownies.",
+    "color": "#bf9460",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["billings", "canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Sunflower / sunbutter base, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-pumpkin-pecan-streusel-and-vanilla-mousse",
+    "name": "Pumpkin, Pecan Streusel and Vanilla Mousse",
+    "description": "Think Pumpkin Pie filling turned into ice cream – creamy pumpkin, nutmeg, cinnamon, clove and ginger – swirled with vanilla mousse and pecan streusel.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Think Pumpkin Pie filling turned into ice cream – creamy pumpkin, nutmeg, cinnamon, clove and ginger – swirled with vanilla mousse and pecan streusel. Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-coffee-bean-crunch",
+    "name": "Coffee Bean Crunch",
+    "description": "Smooth, yet punchy espresso ice cream with crushed espresso bean chocolate bark pieces mixed throughout. Made with Duluth Coffee Co Zenith espresso blend!",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Smooth, yet punchy espresso ice cream with crushed espresso bean chocolate bark pieces mixed throughout. Made with Duluth Coffee Co Zenith espresso blend!",
+    "color": "#cd778a",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "documented",
+          "value": "Coffee / espresso mentioned; caffeine amount is unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-lemon-sherbet",
+    "name": "Lemon Sherbet",
+    "description": "Bright lemon juice is mixed into our dairy ice cream base for a perfect balance of creamy, citrusy tang.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Bright lemon juice is mixed into our dairy ice cream base for a perfect balance of creamy, citrusy tang.",
+    "color": "#e6cc91",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-mocha-mousse",
+    "name": "Mocha Mousse",
+    "description": "Mmmmm, think espresso mocha latte and then ripple in our house made vanilla mouse to get this subtle chocolatey, coffee, whipped creamy flavor.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Mmmmm, think espresso mocha latte and then ripple in our house made vanilla mouse to get this subtle chocolatey, coffee, whipped creamy flavor.",
+    "color": "#bf9460",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "documented",
+          "value": "Coffee / espresso mentioned; caffeine amount is unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-lemon-curd-blueberry",
+    "name": "Vegan Lemon Curd Blueberry",
+    "description": "Our coconut-based vegan ice cream swirled with housemade vegan lemon curd and blueberry jam – made with local blueberries from Sweetland Farm!",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our coconut-based vegan ice cream swirled with housemade vegan lemon curd and blueberry jam – made with local blueberries from Sweetland Farm!",
+    "color": "#a47764",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-chokecherry-chip",
+    "name": "Chokecherry Chip",
+    "description": "Luscious cherry almond ice cream freckled with chocolate chips and rippled with housemade chokecherry jam made from chokecherries foraged by the Turnbull-Dunham family and friends.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Luscious cherry almond ice cream freckled with chocolate chips and rippled with housemade chokecherry jam made from chokecherries foraged by the Turnbull-Dunham family and friends. Official N badge indicates nuts; the badge does not identify the nut type.",
+    "color": "#cd778a",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-cinnamon-snickerdoodle",
+    "name": "Cinnamon Snickerdoodle",
+    "description": "We sprinkle in gluten free house-made snickerdoodle cookies into a warmly spiced cinnamon ice cream sweetened with a touch of honey.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We sprinkle in gluten free house-made snickerdoodle cookies into a warmly spiced cinnamon ice cream sweetened with a touch of honey.",
+    "color": "#e6cc91",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 45,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-goat-cheese-honeycomb",
+    "name": "Goat Cheese Honeycomb",
+    "description": "Goat cheese adds creaminess to an already super creamy base. Our house-made honeycomb candy is added for some chewy crunchiness. This is a fan favorite.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Goat cheese adds creaminess to an already super creamy base. Our house-made honeycomb candy is added for some chewy crunchiness. This is a fan favorite.",
+    "color": "#bf9460",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "documented",
+          "value": "honey mentioned; full sweetener list and quantities unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-salted-licorice",
+    "name": "Salted Licorice",
+    "description": "Inspired by the Finnish treat, this flavor is sweet and salty, slightly dark, and a touch herbal. Our version is a little MN nice on the salt.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Inspired by the Finnish treat, this flavor is sweet and salty, slightly dark, and a touch herbal. Our version is a little MN nice on the salt.",
+    "color": "#a47764",
+    "vegan": "unknown",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 60,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-toffee",
+    "name": "Vegan Toffee",
+    "description": "We make a vegan coconut-based toffee ice cream and then mix in house-made vegan toffee bites for a perfect pairing of smooth a crunchy.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: We make a vegan coconut-based toffee ice cream and then mix in house-made vegan toffee bites for a perfect pairing of smooth a crunchy.",
+    "color": "#cd778a",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-chocolate-cookie-chip",
+    "name": "Chocolate Cookie Chip",
+    "description": "This creamy milk chocolate base is freckled with dark chocolate and loaded with our housemade cookie pieces. A chocolate version of cookies in cream.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: This creamy milk chocolate base is freckled with dark chocolate and loaded with our housemade cookie pieces. A chocolate version of cookies in cream.",
+    "color": "#e6cc91",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 50,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Dairy ingredients are explicitly mentioned in the official description; full base ingredients are not published here"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-mint-chocolate-chip",
+    "name": "Vegan Mint Chocolate Chip",
+    "description": "A vegan coconut base with organic pure peppermint and organic dark chocolate freckled in.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: A vegan coconut base with organic pure peppermint and organic dark chocolate freckled in.",
+    "color": "#bf9460",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 270,
+      "totalFat": 17,
+      "saturatedFat": 10,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 120,
+      "carbohydrates": 27,
+      "fiber": 2,
+      "totalSugars": 22,
+      "addedSugars": 18,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-salted-caramel",
+    "name": "Vegan Salted Caramel",
+    "description": "Our version of our dairy classic made with coconut milk. Sweet, creamy, caramel-y with a touch of sea salt.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our version of our dairy classic made with coconut milk. Sweet, creamy, caramel-y with a touch of sea salt.",
+    "color": "#a47764",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 230,
+      "totalFat": 13,
+      "saturatedFat": 8,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 75,
+      "carbohydrates": 25,
+      "fiber": 1,
+      "totalSugars": 20,
+      "addedSugars": 16,
+      "protein": 3,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
+  },
+  {
+    "id": "lc-vegan-vanilla",
+    "name": "Vegan Vanilla",
+    "description": "Our vegan vanilla ice cream is made with a coconut base and organic vanilla extract and vanilla beans.",
+    "ingredients": "Partial official flavor description, not a complete ingredient list: Our vegan vanilla ice cream is made with a coconut base and organic vanilla extract and vanilla beans.",
+    "color": "#cd778a",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "unknown",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln"],
+    "availability": "unknown",
+    "season": "Not documented in the sources checked",
+    "verified": "2026-10-19",
+    "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+    "demo": false,
+    "archived": false,
+    "nutrition": {
+      "calories": 250,
+      "totalFat": 15,
+      "saturatedFat": 9,
+      "transFat": 0,
+      "cholesterol": 0,
+      "sodium": 85,
+      "carbohydrates": 26,
+      "fiber": 1,
+      "totalSugars": 21,
+      "addedSugars": 17,
+      "protein": 4,
+      "status": "fictional",
+      "servingSize": "Fictional example serving",
+      "servingGrams": 100,
+      "source": "Invented prototype numbers, not measured or calculated for Love Creamery. No official per-flavor nutrition table found in sources checked 2026-10-19.",
+      "verified": ""
+    },
+    "ingredientInfo": {
+      "source": "https://www.lovecreamery.com/ice-cream-flavors/",
+      "verified": "2026-10-19",
+      "fields": {
+        "base": {
+          "status": "documented",
+          "value": "Coconut-based, as described by the official menu"
+        },
+        "sweeteners": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "dyes": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "artificialFlavors": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "preservatives": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "sugarAlcohols": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "caffeine": {
+          "status": "unknown",
+          "value": "Unknown"
+        },
+        "alcohol": {
+          "status": "unknown",
+          "value": "Unknown"
+        }
+      }
+    },
+    "ingredientsComplete": "no"
   }
 ]

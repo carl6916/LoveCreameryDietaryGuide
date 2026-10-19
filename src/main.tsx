@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import initial from "./catalog.json";
 import locations from "./locations.json";
 import brand from "./brand.json";
+import research from "./research.json";
+import { emptyNutrition, emptyIngredientInfo } from "./nutrition";
+import { NutritionPanel, NutritionEditor } from "./Nutrition";
 import {
   allergens,
   answer,
@@ -17,7 +20,11 @@ let loadWarning = "";
 function load() {
   try {
     const saved = localStorage.getItem(key);
-    return validateCatalog(saved ? JSON.parse(saved) : initial);
+    const parsed = validateCatalog(saved ? JSON.parse(saved) : initial);
+    if (saved && !parsed.some((f) => !f.demo))
+      loadWarning =
+        "Your saved catalog is preserved. Manage catalog → Add latest shop listings adds researched flavors without replacing your edits. Older nutrition fields start as unknown.";
+    return parsed;
   } catch {
     loadWarning =
       "Saved catalog could not be loaded. Showing demonstration defaults; export or repair your browser data before saving.";
@@ -70,7 +77,9 @@ function App() {
     [reply, setReply] = useState(""),
     [selected, setSelected] = useState<Flavor>(),
     [edit, setEdit] = useState<Flavor | null>(null),
-    [notice, setNotice] = useState(loadWarning);
+    [notice, setNotice] = useState(loadWarning),
+    [catalogView, setCatalogView] = useState("official"),
+    [flavorSearch, setFlavorSearch] = useState("");
   function save(next: Flavor[]) {
     try {
       validateCatalog(next);
@@ -85,10 +94,16 @@ function App() {
   }
   function ask(q: string) {
     setQuestion(q);
-    setReply(answer(q, catalog, loc, selected));
+    setReply(answer(q, activeCatalog, loc, selected));
   }
-  const visible = catalog.filter(
-    (f) => !f.archived && f.locations.includes(loc),
+  const activeCatalog = catalog.filter(
+    (f) => catalogView === "all" || (catalogView === "demo" ? f.demo : !f.demo),
+  );
+  const visible = activeCatalog.filter(
+    (f) =>
+      !f.archived &&
+      f.locations.includes(loc) &&
+      f.name.toLowerCase().includes(flavorSearch.toLowerCase().trim()),
   );
   return (
     <>
@@ -161,10 +176,38 @@ function App() {
           </p>
         </aside>
         <div className="demo-banner">
-          {catalog.some((f) => f.demo)
-            ? "DEMONSTRATION DATA INCLUDED · Fictional entries demonstrate this guide and are not verified Love Creamery products. No demonstration stock is confirmed."
-            : "LOCAL CATALOG · User-supplied documentation; confirm current stock and preparation directly with the shop."}
+          Official menu descriptions and dietary labels are source documented.
+          Separate demonstration flavors are fictional. Menu listings do not
+          confirm live stock.
         </div>
+        <aside
+          className="nutrition-disclaimer"
+          aria-label="Fictional nutrition disclaimer"
+        >
+          <strong>Fictional nutrition examples — read before using.</strong>
+          <p>
+            Calories, sugars, protein, and all other seeded nutrition numbers —
+            including serving sizes — are invented examples, not official Love
+            Creamery values or calculated estimates. Do not use them for medical
+            diets. Dyes and other missing ingredient information remain unknown
+            for real flavors.
+          </p>
+          <details>
+            <summary>What we found online · checked {research.checked}</summary>
+            {research.sources.map((source) => (
+              <p key={source.url}>
+                <a href={source.url}>{source.url}</a>
+                <br />
+                {source.finding}
+              </p>
+            ))}
+            <p>{research.searches}</p>
+            <p>
+              The FAQ’s 18–19% butterfat statement is general information and is
+              not converted into per-serving fat grams.
+            </p>
+          </details>
+        </aside>
         {notice && (
           <p role="status" className="notice">
             {notice}
@@ -276,6 +319,41 @@ function App() {
                     {visible.length} catalog entries · Stock unconfirmed
                   </span>
                 </div>
+                <div className="catalog-controls">
+                  <label>
+                    Catalog entries
+                    <select
+                      value={catalogView}
+                      onChange={(e) => {
+                        setCatalogView(e.target.value);
+                        setSelected(undefined);
+                        setReply("");
+                      }}
+                    >
+                      <option value="official">Official menu listings</option>
+                      <option value="demo">
+                        Fictional demonstration flavors
+                      </option>
+                      <option value="all">All entries</option>
+                    </select>
+                  </label>
+                  <label>
+                    Search flavor names
+                    <input
+                      type="search"
+                      value={flavorSearch}
+                      onChange={(e) => setFlavorSearch(e.target.value)}
+                      placeholder="e.g. Salted Caramel"
+                    />
+                  </label>
+                </div>
+                {!visible.length && (
+                  <p>
+                    No entries match this view. Try another location or catalog,
+                    clear the search, or add the latest shop listings in Manage
+                    catalog.
+                  </p>
+                )}
                 {(
                   [
                     "Matches documented restrictions",
@@ -309,7 +387,9 @@ function App() {
                                 className="mini-scoop"
                               />
                               <span>
-                                {f.demo ? "DEMONSTRATION" : "DOCUMENTED ENTRY"}
+                                {f.demo
+                                  ? "DEMONSTRATION"
+                                  : "OFFICIAL MENU LISTING"}
                               </span>
                             </div>
                             <div className="card-body">
@@ -319,6 +399,7 @@ function App() {
                                 <span>Vegan: {f.vegan}</span>
                                 <span>Gluten-free: {f.glutenFree}</span>
                               </div>
+                              <NutritionPanel flavor={f} />
                               <dl>
                                 {allergens.map((a) => (
                                   <React.Fragment key={a}>
@@ -343,7 +424,7 @@ function App() {
                                 <br />
                                 <strong>Season:</strong> {f.season}
                                 <br />
-                                <strong>Last verified:</strong>{" "}
+                                <strong>Listing checked:</strong>{" "}
                                 {f.verified || "Not verified — demonstration"}
                                 <br />
                                 <strong>Source:</strong> {f.source}
@@ -401,9 +482,9 @@ function App() {
                   guide to prepare questions for the scoop counter.
                 </p>
                 <p className="story-note">
-                  Real shop imagery, fictional catalog examples. A photograph
-                  cannot confirm a flavor’s ingredients, allergens, or current
-                  availability.
+                  Real shop imagery; seeded nutrition numbers are fictional
+                  examples. A photograph cannot confirm ingredients, allergens,
+                  or availability.
                 </p>
                 <a className="story-link" href="https://www.lovecreamery.com/">
                   Visit Love Creamery’s official website ↗
@@ -430,6 +511,8 @@ function App() {
                     "Which flavors are vegan and gluten-free?",
                     "I’m allergic to peanuts. What can I have?",
                     "Are there dairy-free chocolate flavors?",
+                    "How many calories and sugars in Salted Caramel?",
+                    "Does Salted Caramel have dyes?",
                   ].map((q) => (
                     <button key={q} onClick={() => ask(q)}>
                       {q} ↗
@@ -494,6 +577,9 @@ function App() {
                     source: "User-entered demonstration; not verified",
                     demo: true,
                     archived: false,
+                    ingredientsComplete: "unknown",
+                    nutrition: emptyNutrition(),
+                    ingredientInfo: emptyIngredientInfo(),
                   })
                 }
               >
@@ -506,6 +592,21 @@ function App() {
               with everyone. Export a backup before switching browsers.
             </p>
             <div className="tools">
+              <button
+                onClick={() => {
+                  const ids = new Set(catalog.map((f) => f.id));
+                  const additions = validateCatalog(initial).filter(
+                    (f) => !f.demo && !ids.has(f.id),
+                  );
+                  if (additions.length) save([...catalog, ...additions]);
+                  else
+                    setNotice(
+                      "All researched shop listings are already in this browser catalog.",
+                    );
+                }}
+              >
+                Add latest shop listings
+              </button>
               <button
                 onClick={() => {
                   const url = URL.createObjectURL(
@@ -667,6 +768,7 @@ function App() {
                     </select>
                   </label>
                 ))}
+                <NutritionEditor flavor={edit} onChange={setEdit} />
                 <fieldset>
                   <legend>Associated locations</legend>
                   {locations.map((l) => (
@@ -724,8 +826,8 @@ function App() {
             Packaging reference:{" "}
             <a href={brand.referenceUrl}>Matthew G. Olin and Jacey Kufahl</a>.
             <br />
-            Brand images do not verify the fictional catalog. Confirm products
-            and ingredients directly with the shop.
+            Brand images do not verify nutrition or ingredient claims. Confirm
+            products and ingredients directly with the shop.
           </p>
         </footer>
       </main>
