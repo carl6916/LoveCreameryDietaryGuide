@@ -167,6 +167,8 @@ export function answer(
       !f.archived &&
       matchesLocations(f, loc) &&
       (!named || f.id === named.id) &&
+      // Direct flavor questions still explain conflicts; recommendations omit them.
+      (Boolean(named) || classify(f, needs) !== "Does not match") &&
       (!/chocolate|cocoa/.test(q) ||
         /chocolate|cocoa/i.test(f.name + " " + f.ingredients)),
   );

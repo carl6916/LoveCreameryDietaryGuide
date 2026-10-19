@@ -100,6 +100,11 @@ await page
   })
   .click();
 assert.match(await page.locator(".reply").innerText(), /Vegan Vanilla/);
+assert.doesNotMatch(await page.locator(".reply").innerText(), /Does not match|Buttermilk Vanilla/);
+await page.locator("#question").fill("What flavors are peanut free?");
+await page.getByRole("button", { name: "Ask →", exact: true }).click();
+assert.match(await page.locator(".reply").innerText(), /Needs confirmation/);
+assert.doesNotMatch(await page.locator(".reply").innerText(), /Monster Cookie|Does not match/);
 await questionsTab.focus();
 await page.keyboard.press("Home");
 assert.equal(await flavorsTab.getAttribute("aria-selected"), "true");

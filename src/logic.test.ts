@@ -34,7 +34,7 @@ test("assistant supports locations and multiple needs", () => {
   );
   assert.match(text, /Summer Berry/);
   assert.doesNotMatch(text, /Coconut Cocoa/);
-  assert.match(text, /Does not match/);
+  assert.doesNotMatch(text, /Does not match|Vanilla Bean|Peanut Cookie Crunch/);
 });
 test("assistant reports specific ingredient and uncertainty", () => {
   assert.match(
@@ -232,11 +232,10 @@ test("assistant shares the selected location union and honors explicit shops", (
   for (const name of [
     "Coconut Cocoa",
     "Summer Berry Sorbet",
-    "Vanilla Bean",
-    "Peanut Cookie Crunch",
   ])
     assert.ok(text.includes(name));
-  assert.equal((text.match(/Vanilla Bean/g) || []).length, 1);
+  assert.equal((text.match(/Coconut Cocoa/g) || []).length, 1);
+  assert.doesNotMatch(text, /Vanilla Bean|Peanut Cookie Crunch/);
   const explicit = answer(
     "vegan flavors in Billings Park",
     catalog.slice(0, 4),
@@ -249,7 +248,7 @@ test("assistant shares the selected location union and honors explicit shops", (
     ["billings"],
   );
   assert.match(mentioned, /Coconut Cocoa/);
-  assert.match(mentioned, /Peanut Cookie Crunch/);
+  assert.doesNotMatch(mentioned, /Peanut Cookie Crunch/);
   assert.match(answer("vegan flavors", catalog, []), /Coconut Cocoa/);
 });
 
@@ -312,4 +311,23 @@ test("questions search all shops by default and recognize named shops or cities"
     answer("How much protein in Vegan Vanilla in Lincoln Park?", actual),
     /Vegan Vanilla/,
   );
+});
+
+
+test("dietary recommendations retain unknowns and exclude conflicts", () => {
+  const flavors = catalog.slice(0, 4).map((f, i) =>
+    i === 2 ? { ...f, glutenFree: "unknown" as const } : f,
+  );
+  const text = answer("What flavors are gluten free?", flavors);
+  assert.match(text, /Summer Berry Sorbet.*Matches documented restrictions/);
+  assert.match(text, /Vanilla Bean.*Needs confirmation/);
+  assert.doesNotMatch(text, /Peanut Cookie Crunch|Does not match/);
+  const allergies = answer("What flavors are peanut free?", flavors);
+  assert.match(allergies, /Vanilla Bean.*Needs confirmation/);
+  assert.doesNotMatch(allergies, /Peanut Cookie Crunch/);
+  const nutrition = answer("Show protein for gluten free flavors", flavors);
+  assert.match(nutrition, /Vanilla Bean/);
+  assert.match(nutrition, /Needs confirmation/);
+  assert.doesNotMatch(nutrition, /Peanut Cookie Crunch|Does not match/);
+  assert.match(answer("What flavors are vegan?", [catalog[3]]), /No matching/);
 });
