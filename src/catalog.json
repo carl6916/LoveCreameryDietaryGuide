@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cocoa",
+    "name": "Coconut Cocoa",
+    "description": "A rich cocoa swirl with a creamy coconut finish.",
+    "ingredients": "Coconut milk, cocoa, sugar (fictional recipe).",
+    "color": "#a47764",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "unknown",
+      "egg": "absent",
+      "peanut": "absent",
+      "tree nut": "contains",
+      "soy": "unknown",
+      "sesame": "absent"
+    },
+    "locations": ["canal", "lincoln"],
+    "availability": "unknown",
+    "season": "Year-round demonstration",
+    "verified": "",
+    "source": "Fictional demonstration recipe; not a Love Creamery product",
+    "demo": true,
+    "archived": false
+  },
+  {
+    "id": "berry",
+    "name": "Summer Berry Sorbet",
+    "description": "Bright berries and a little sunshine in every spoonful.",
+    "ingredients": "Strawberries, raspberries, water, sugar (fictional recipe).",
+    "color": "#cd778a",
+    "vegan": "yes",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "absent",
+      "egg": "absent",
+      "peanut": "absent",
+      "tree nut": "absent",
+      "soy": "absent",
+      "sesame": "absent"
+    },
+    "locations": ["canal", "billings"],
+    "availability": "unknown",
+    "season": "Summer demonstration",
+    "verified": "",
+    "source": "Fictional demonstration recipe; not a Love Creamery product",
+    "demo": true,
+    "archived": false
+  },
+  {
+    "id": "vanilla",
+    "name": "Vanilla Bean",
+    "description": "Simple, mellow vanilla with a classic custard texture.",
+    "ingredients": "Milk, cream, eggs, sugar, vanilla (fictional recipe).",
+    "color": "#e6cc91",
+    "vegan": "no",
+    "glutenFree": "yes",
+    "allergens": {
+      "milk": "contains",
+      "egg": "contains",
+      "peanut": "unknown",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["canal", "lincoln", "billings"],
+    "availability": "unknown",
+    "season": "Unknown",
+    "verified": "",
+    "source": "Fictional demonstration recipe; not a Love Creamery product",
+    "demo": true,
+    "archived": false
+  },
+  {
+    "id": "cookie",
+    "name": "Peanut Cookie Crunch",
+    "description": "A nutty scoop with crunchy cookie pieces.",
+    "ingredients": "Milk, peanuts, wheat cookies; remaining ingredients undocumented (fictional recipe).",
+    "color": "#bf9460",
+    "vegan": "no",
+    "glutenFree": "no",
+    "allergens": {
+      "milk": "contains",
+      "egg": "unknown",
+      "peanut": "contains",
+      "tree nut": "unknown",
+      "soy": "unknown",
+      "sesame": "unknown"
+    },
+    "locations": ["lincoln", "billings"],
+    "availability": "unknown",
+    "season": "Unknown",
+    "verified": "",
+    "source": "Fictional demonstration recipe; not a Love Creamery product",
+    "demo": true,
+    "archived": false
+  }
+]
