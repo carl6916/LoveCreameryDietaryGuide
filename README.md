@@ -17,7 +17,7 @@ With the dev or preview server running, run `npx playwright install chromium` on
 
 ## Customer experience
 
-Choose one or more locations, select dietary preferences/allergies, and click **Find My Flavors**. Flavors associated with any selected location appear once. Cards show an image, name, and description. Open a card for associated stores, dietary/allergen information, nutrition, ingredients, and sources. Close with the button, Escape, or backdrop; focus returns to the card. Search narrows flavor names; Reset clears filters. The local question assistant uses the same location selection and catalog.
+Choose one or more locations, select dietary preferences/allergies, and click **Find My Flavors**. Flavors associated with any selected location appear once. Cards show an image, name, and description. Open a card for associated stores, dietary/allergen information, nutrition and ingredients. Close with the button, Escape, or backdrop; focus returns to the card. Search narrows flavor names; Reset clears filters. The local question assistant uses the same location selection and catalog.
 
 There is no customer catalog editor, import/export interface, or browser-save workflow. The app reads its bundled catalog and ignores old `love-creamery-catalog-v1` localStorage overrides without deleting them. This prevents previously saved fictional flavors or customer edits from appearing. Filtering and asking questions do not modify the catalog.
 
@@ -41,10 +41,12 @@ Developers update `src/catalog.json` and redeploy to change the shared catalog. 
 
 Approximate sky blue, soft yellow, pink, cream, and brown reflect the packaging references; these are not official color specifications. Local assets include the winged logo, blue-background cups photo, and a Lincoln Park storefront photograph. Packaging reference: https://www.matthewolin.com/love-creamery/ , credited to Matthew G. Olin and Jacey Kufahl. Sources are documented in `public/brand/README.md`; configure assets in `src/brand.json`.
 
-45 exact-name flavor photos are stored in `public/flavors/`, with source URLs and dates in `src/flavorPhotos.json`. Apple Cajeta had no matching official photo and retains an illustration. Photos have alt text and source links in the detail view. `python3 scripts/sync-flavor-photos.py` refreshes them using the Python standard library; this is an optional development operation, never a runtime dependency. Imagery does not establish ingredients, nutrition, or stock.
+45 exact-name flavor photos are stored in `public/flavors/`, with source URLs and dates in `src/flavorPhotos.json`. Apple Cajeta had no matching official photo and retains an illustration. Photos have alt text. Source links and checked dates are kept in developer metadata and documentation, not displayed in the customer app. `python3 scripts/sync-flavor-photos.py` refreshes them using the Python standard library; this is an optional development operation, never a runtime dependency. Imagery does not establish ingredients, nutrition, or stock.
 
 ## GitHub checks and deployment
 
 Pushes to `main` and pull requests run `.github/workflows/checks.yml`: clean install, logic tests, production build, and Chromium browser checks. Passing runs upload `dietary-guide-dist`. On `main`, a deployment job then publishes GitHub Pages. Pull requests do not deploy.
 
 Enable **Settings → Pages → GitHub Actions**, then run **Actions → Build and test → Run workflow → main** if needed. GitHub displays the deployed URL after success. Expected project URL: https://carl6916.github.io/LoveCreameryDietaryGuide/ . Build assets use relative paths for project-site hosting.
+
+Customer-facing source links, photo credit links, checked dates, and the “Honest about the unknowns” hero line are removed. Research and asset provenance remain in the JSON metadata and this documentation. The single main-page test disclaimer is retained.

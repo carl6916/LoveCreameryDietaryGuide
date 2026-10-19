@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import initial from "./catalog.json";
 import locations from "./locations.json";
 import brand from "./brand.json";
-import research from "./research.json";
 import { FlavorDetails } from "./FlavorDetails";
 import { FlavorImage } from "./FlavorImage";
 import {
@@ -100,7 +99,6 @@ function App() {
             </p>
             <div className="hero-tags">
               <span>♡ Made for your preferences</span>
-              <span>✧ Honest about the unknowns</span>
             </div>
           </div>
           <figure className="hero-visual has-photo">
@@ -120,7 +118,6 @@ function App() {
               <b>a little love</b>
               <span>✦</span>
             </span>
-            <figcaption>{brand.heroCredit}</figcaption>
           </figure>
         </div>
         <aside className="test-notice" aria-label="Test information disclaimer">
@@ -134,16 +131,6 @@ function App() {
             directly with the shop. This independent prototype is not affiliated
             with or endorsed by Love Creamery.
           </p>
-          <details>
-            <summary>Research sources · checked {research.checked}</summary>
-            {research.sources.map((source) => (
-              <p key={source.url}>
-                <a href={source.url}>{source.url}</a>
-                <br />
-                {source.finding}
-              </p>
-            ))}
-          </details>
         </aside>
         <section id="flavor-finder" className="planner">
           <div className="section-title">
@@ -337,9 +324,7 @@ function App() {
               height="600"
               loading="lazy"
             />
-            <figcaption>
-              Lincoln Park, Duluth · photograph from Love Creamery’s website
-            </figcaption>
+            <figcaption>Lincoln Park, Duluth</figcaption>
           </figure>
           <div>
             <span className="eyebrow">FROM THE NEIGHBORHOOD SCOOP SHOP</span>
@@ -352,10 +337,6 @@ function App() {
               forward to. Bring that same curiosity to ingredients: use this
               guide to prepare questions for the scoop counter.
             </p>
-
-            <a className="story-link" href="https://www.lovecreamery.com/">
-              Visit Love Creamery’s official website ↗
-            </a>
           </div>
         </section>
         <section id="assistant" className="assistant">
@@ -423,16 +404,7 @@ function App() {
           <span className="brand">
             <BrandMark />
           </span>
-          <p>
-            Reference resources:{" "}
-            <a href="https://lovecreamery.com/ice-cream-flavors/">
-              Official flavors
-            </a>{" "}
-            · <a href="https://lovecreamery.com/faqs/">Official FAQs</a>
-            <br />
-            Packaging reference:{" "}
-            <a href={brand.referenceUrl}>Matthew G. Olin and Jacey Kufahl</a>.
-          </p>
+          <p>Flavor & ingredient guide</p>
         </footer>
       </main>
       {detailFlavor && (

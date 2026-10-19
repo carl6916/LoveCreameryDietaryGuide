@@ -47,17 +47,11 @@ export function FlavorImage({
           <span>{flavor.demo ? "DEMONSTRATION" : "OFFICIAL MENU LISTING"}</span>
         )}
       </div>
-      {!compact && (
+      {!compact && !showPhoto && (
         <figcaption>
-          {showPhoto ? (
-            <>
-              <a href={photo.source}>Photo: Love Creamery’s website ↗</a>
-            </>
-          ) : flavor.demo ? (
-            "Illustration for a fictional flavor"
-          ) : (
-            "Illustration — official flavor photo unavailable"
-          )}
+          {flavor.demo
+            ? "Illustration for a fictional flavor"
+            : "Illustration — official flavor photo unavailable"}
         </figcaption>
       )}
     </figure>

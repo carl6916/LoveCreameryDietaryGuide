@@ -1,6 +1,6 @@
 export type Evidence = "documented" | "fictional" | "unknown";
 export const evidenceLabels: Record<Evidence, string> = {
-  documented: "Source documented",
+  documented: "Documented",
   fictional: "Fictional example",
   unknown: "Unknown",
 };
@@ -170,6 +170,6 @@ export function nutritionSummary(n: Nutrition, showNotice = true): string {
     : "Nutrition per stored serving";
   const serving =
     !showNotice && n.status === "fictional" ? "example serving" : n.servingSize;
-  const sourceVisible = showNotice || n.status === "documented";
+  const sourceVisible = showNotice;
   return `${heading}. Serving: ${serving}${n.servingGrams !== null ? ` (${n.servingGrams} g)` : ""}. ${nutrientFields.map((f) => `${f.label}: ${n[f.key] === null ? "Unknown" : `${n[f.key]} ${f.unit}`}`).join("; ")}.${sourceVisible && n.source ? ` Source: ${n.source}.` : ""}${sourceVisible && n.verified ? ` Checked: ${n.verified}.` : ""}`;
 }

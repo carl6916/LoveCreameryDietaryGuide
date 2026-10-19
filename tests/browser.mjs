@@ -36,6 +36,15 @@ await page.goto(base);
 for (const selector of ["header .official-logo", ".hero-photo"])
   await page.locator(selector).evaluate((img) => img.decode());
 assert.equal(await page.locator(".test-notice").count(), 1);
+assert.equal(
+  await page.getByText("Honest about the unknowns", { exact: false }).count(),
+  0,
+);
+assert.equal(await page.locator('a[href^="http"]').count(), 0);
+assert.doesNotMatch(
+  await page.locator("main").innerText(),
+  /Research sources|Reference resources|checked 2026-/i,
+);
 assert.match(
   await page.locator(".test-notice").innerText(),
   /information is not accurate/,
@@ -86,18 +95,14 @@ assert.equal(
   await page.getByText("Old Customer Override", { exact: true }).count(),
   0,
 );
-const caramel = page
-  .locator(".flavor")
-  .filter({
-    has: page.getByRole("heading", { name: "Salted Caramel", exact: true }),
-  });
+const caramel = page.locator(".flavor").filter({
+  has: page.getByRole("heading", { name: "Salted Caramel", exact: true }),
+});
 await caramel.locator(".flavor-photo").scrollIntoViewIfNeeded();
 await caramel.locator(".flavor-photo").evaluate((img) => img.decode());
-const apple = page
-  .locator(".flavor")
-  .filter({
-    has: page.getByRole("heading", { name: "Apple Cajeta", exact: true }),
-  });
+const apple = page.locator(".flavor").filter({
+  has: page.getByRole("heading", { name: "Apple Cajeta", exact: true }),
+});
 assert.equal(await apple.locator(".flavor-photo").count(), 0);
 assert.equal(
   await apple.getByRole("img", { name: /official photo unavailable/ }).count(),
@@ -128,6 +133,11 @@ const dialog = page.getByRole("dialog", {
   exact: true,
 });
 await dialog.waitFor();
+assert.equal(await dialog.locator('a[href^="http"]').count(), 0);
+assert.doesNotMatch(
+  await dialog.innerText(),
+  /Listing checked:|Nutrition checked:|Ingredients checked:|Ingredient source:|Nutrition source:|https?:\/\//i,
+);
 for (const name of ["Canal Park", "Lincoln Park", "Billings Park"])
   assert.match(
     await dialog.getByRole("region", { name: "Store locations" }).innerText(),
@@ -173,6 +183,10 @@ await page.getByRole("button", { name: "Ask →", exact: true }).click();
 assert.match(
   await page.locator(".reply").innerText(),
   /Dyes \/ added colors: Unknown/,
+);
+assert.doesNotMatch(
+  await page.locator(".reply").innerText(),
+  /Ingredient source:|checked 2026-|https?:\/\//i,
 );
 await page.getByRole("button", { name: /Lincoln Park/ }).click();
 await page.getByRole("button", { name: /Find My Flavors/ }).click();

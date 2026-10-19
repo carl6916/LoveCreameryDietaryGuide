@@ -193,7 +193,7 @@ export function answer(
         ? candidates
             .map(
               (f) =>
-                `${f.name}${f.demo ? " [DEMONSTRATION FLAVOR]" : " [OFFICIAL MENU LISTING]"}${needs.length ? `\nDietary check: ${classify(f, needs)}` : ""}\n${wantsNutrition ? nutritionSummary(f.nutrition, showNotices) : ""}${requestedFacts.map((field) => `\n${field.label}: ${f.ingredientInfo.fields[field.key].value} [${evidenceLabels[f.ingredientInfo.fields[field.key].status]}]`).join("")}${requestedFacts.length && f.ingredientInfo.source ? `\nIngredient source: ${f.ingredientInfo.source}; checked ${f.ingredientInfo.verified || "Unknown"}` : ""}${/ingredient/.test(q) ? `\nIngredient description (${f.ingredientsComplete === "yes" ? "complete list" : "partial or unconfirmed list"}): ${f.ingredients}` : ""}`,
+                `${f.name}${f.demo ? " [DEMONSTRATION FLAVOR]" : " [OFFICIAL MENU LISTING]"}${needs.length ? `\nDietary check: ${classify(f, needs)}` : ""}\n${wantsNutrition ? nutritionSummary(f.nutrition, showNotices) : ""}${requestedFacts.map((field) => `\n${field.label}: ${f.ingredientInfo.fields[field.key].value} [${evidenceLabels[f.ingredientInfo.fields[field.key].status]}]`).join("")}${showNotices && requestedFacts.length && f.ingredientInfo.source ? `\nIngredient source: ${f.ingredientInfo.source}; checked ${f.ingredientInfo.verified || "Unknown"}` : ""}${/ingredient/.test(q) ? `\nIngredient description (${f.ingredientsComplete === "yes" ? "complete list" : "partial or unconfirmed list"}): ${f.ingredients}` : ""}`,
             )
             .join("\n\n")
         : "No matching catalog entries for that flavor and location.") +

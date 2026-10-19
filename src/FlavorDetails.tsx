@@ -104,17 +104,12 @@ export function FlavorDetails({
         </section>
         <NutritionPanel flavor={flavor} expanded />
         <section className="detail-provenance">
-          <h3>Ingredients & source</h3>
+          <h3>Ingredients</h3>
           <p>
             <strong>Ingredients:</strong> {flavor.ingredients}
           </p>
           <p>
             <strong>Season:</strong> {flavor.season}
-            <br />
-            <strong>Listing checked:</strong>{" "}
-            {flavor.verified || "Not verified — demonstration"}
-            <br />
-            <strong>Source:</strong> {flavor.source}
           </p>
         </section>
         <button

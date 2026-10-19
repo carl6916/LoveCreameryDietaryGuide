@@ -50,13 +50,6 @@ export function NutritionPanel({
             ))}
           </tbody>
         </table>
-        {n.status === "documented" && (
-          <p>
-            <strong>Nutrition source:</strong> {n.source}
-            <br />
-            <strong>Nutrition checked:</strong> {n.verified}
-          </p>
-        )}
         <h4>General ingredient information</h4>
         <p>
           Ingredient list:{" "}
@@ -84,14 +77,6 @@ export function NutritionPanel({
             );
           })}
         </dl>
-        <p>
-          <strong>Ingredient source:</strong>{" "}
-          {f.ingredientInfo.source ||
-            "Not provided; fictional or unknown fields are not verified"}
-          <br />
-          <strong>Ingredients checked:</strong>{" "}
-          {f.ingredientInfo.verified || "Unknown"}
-        </p>
       </details>
     </section>
   );
